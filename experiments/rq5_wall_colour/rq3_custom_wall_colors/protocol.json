@@ -1,0 +1,22 @@
+{
+  "colours": {
+    "black": [
+      20,
+      20,
+      20
+    ],
+    "cyan": [
+      0,
+      180,
+      180
+    ],
+    "magenta": [
+      180,
+      0,
+      180
+    ]
+  },
+  "episodes_per_model_colour": 100,
+  "action_mode": "stochastic",
+  "evaluation_seed_base": 10000
+}

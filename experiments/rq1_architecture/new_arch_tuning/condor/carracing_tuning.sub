@@ -1,0 +1,20 @@
+# Focused B-cos-only tuning: 12 independent one-run agents.
+SWEEP_ID = cs8ptxkc
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_sweep_agent.sh car_racing_part/sweep_rq1_new_arch_tuning.py rq1-carracing-ppo-new-architecture-tuning-v1 $(SWEEP_ID) 1 --entity ruslandontsov2005-saarland-informatics-campus
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq1_architecture/new_arch_tuning/condor/logs/carracing-$(ClusterId)-$(ProcId).out
+error = experiments/rq1_architecture/new_arch_tuning/condor/logs/carracing-$(ClusterId)-$(ProcId).err
+log = experiments/rq1_architecture/new_arch_tuning/condor/logs/carracing-$(ClusterId).log
+request_cpus = 2
+request_memory = 16GB
+request_disk = 12GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+queue 12

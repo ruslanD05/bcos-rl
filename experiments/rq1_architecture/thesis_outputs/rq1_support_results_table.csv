@@ -1,0 +1,5 @@
+Environment,Model,Success,Return,Episode length
+LavaCrossing,Standard PPO,0.156 $\pm$ 0.253,0.1 $\pm$ 0.2,203.4 $\pm$ 140.0
+LavaCrossing,B-cos PPO,0.612 $\pm$ 0.387,0.6 $\pm$ 0.4,117.9 $\pm$ 101.3
+CarRacing,Standard PPO,--,738.8 $\pm$ 49.7,977.4 $\pm$ 11.4
+CarRacing,B-cos PPO,--,752.6 $\pm$ 106.8,973.3 $\pm$ 18.6

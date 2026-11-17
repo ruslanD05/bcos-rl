@@ -1,0 +1,25 @@
+# LavaCrossing S9N1: standard versus B-cos PPO, five matched seeds.
+# condor_submit experiments/rq1_architecture/condor/04_minigrid_support.sub
+
+BCOS_B = 2.3
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_sweep_agent.sh minigrid_part/sweep_rq1_minigrid_support.py rq1-lavacrossing-ppo-architecture-final z4xujlnl 1 --bcos-b $(BCOS_B)
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq1_architecture/condor/logs/lavacrossing-$(ClusterId)-$(ProcId).out
+error = experiments/rq1_architecture/condor/logs/lavacrossing-$(ClusterId)-$(ProcId).err
+log = experiments/rq1_architecture/condor/logs/lavacrossing-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 8GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+
+queue 10

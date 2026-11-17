@@ -1,0 +1,28 @@
+# Five-seed W&B CarRacing support experiment for RQ3.
+# B-cos PPO with a fixed visual mask: P = car + road boundaries + full
+# dashboard; N = grass + road interior; D = curbs and uncertain pixels.
+#
+# Create the sweep locally, then submit from the repository root:
+#   condor_submit experiments/rq3_carracing_support/condor/rq3_carracing_boundary_support.sub SWEEP_ID=<id>
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_sweep_agent.sh car_racing_part/sweep_rq3_carracing_boundary_support.py thesis-rq3-carracing-boundary-support-v1 $(SWEEP_ID) 1 --entity ruslandontsov2005-saarland-informatics-campus --output-root experiments/rq3_carracing_support/runs
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq3_carracing_support/condor/logs/rq3-carracing-boundary-$(ClusterId)-$(ProcId).out
+error = experiments/rq3_carracing_support/condor/logs/rq3-carracing-boundary-$(ClusterId)-$(ProcId).err
+log = experiments/rq3_carracing_support/condor/logs/rq3-carracing-boundary-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 12GB
+request_disk = 16GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+
+queue 5

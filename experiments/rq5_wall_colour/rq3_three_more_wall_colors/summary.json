@@ -1,0 +1,567 @@
+{
+  "protocol": {
+    "environment": "MiniGrid-DoorKey-8x8-v0",
+    "observation": "RGB6",
+    "episodes_per_model_variant": 100,
+    "in_process_environments": 8,
+    "policy_action_mode": "stochastic",
+    "training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "wall_variants": [
+      "normal",
+      "red",
+      "blue",
+      "yellow"
+    ],
+    "evaluation_seed_base": 10000,
+    "bootstrap_repeats": 20000
+  },
+  "aggregate_statistics": [
+    {
+      "branch": "pure",
+      "variant": "normal",
+      "metric": "success_rate",
+      "mean": 1.0,
+      "sample_sd": 0.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "normal",
+      "metric": "mean_reward",
+      "mean": 1.1251881428658963,
+      "sample_sd": 0.000640006300117673,
+      "ci95_low": 1.1247156427800657,
+      "ci95_high": 1.1257084551751615,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "normal",
+      "metric": "mean_episode_length",
+      "mean": 17.644,
+      "sample_sd": 0.4551153699887527,
+      "ci95_low": 17.259999999999998,
+      "ci95_high": 17.966,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "red",
+      "metric": "success_rate",
+      "mean": 0.008,
+      "sample_sd": 0.010954451150103323,
+      "ci95_low": 0.0,
+      "ci95_high": 0.016,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "red",
+      "metric": "mean_reward",
+      "mean": 0.035828750573098624,
+      "sample_sd": 0.018320736312570376,
+      "ci95_low": 0.02210000032931562,
+      "ci95_high": 0.04957875082641838,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "red",
+      "metric": "mean_episode_length",
+      "mean": 638.344,
+      "sample_sd": 2.4915216234261384,
+      "ci95_low": 636.104,
+      "ci95_high": 640.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "blue",
+      "metric": "success_rate",
+      "mean": 0.186,
+      "sample_sd": 0.20019990009987518,
+      "ci95_low": 0.046,
+      "ci95_high": 0.356,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "blue",
+      "metric": "mean_reward",
+      "mean": 0.18807562609761946,
+      "sample_sd": 0.18554977686937268,
+      "ci95_low": 0.05992062544822689,
+      "ci95_high": 0.34539906370639795,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "blue",
+      "metric": "mean_episode_length",
+      "mean": 567.484,
+      "sample_sd": 92.53779838530848,
+      "ci95_low": 486.28999999999996,
+      "ci95_high": 628.2520000000001,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "yellow",
+      "metric": "success_rate",
+      "mean": 0.014000000000000002,
+      "sample_sd": 0.016733200530681513,
+      "ci95_low": 0.002,
+      "ci95_high": 0.028000000000000004,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "yellow",
+      "metric": "mean_reward",
+      "mean": 0.0481684382036328,
+      "sample_sd": 0.019548977074975365,
+      "ci95_low": 0.03352562551200386,
+      "ci95_high": 0.06316593844443559,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "yellow",
+      "metric": "mean_episode_length",
+      "mean": 635.258,
+      "sample_sd": 7.044296984085753,
+      "ci95_low": 629.0020000000001,
+      "ci95_high": 639.484,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "normal",
+      "metric": "success_rate",
+      "mean": 1.0,
+      "sample_sd": 0.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "normal",
+      "metric": "mean_reward",
+      "mean": 1.1252922054231167,
+      "sample_sd": 0.0006190695369690697,
+      "ci95_low": 1.124833768337965,
+      "ci95_high": 1.1257787677943707,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "normal",
+      "metric": "mean_episode_length",
+      "mean": 17.57,
+      "sample_sd": 0.4402272140611018,
+      "ci95_low": 17.224,
+      "ci95_high": 17.895999999999997,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "red",
+      "metric": "success_rate",
+      "mean": 0.004,
+      "sample_sd": 0.005477225575051661,
+      "ci95_low": 0.0,
+      "ci95_high": 0.008,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "red",
+      "metric": "mean_reward",
+      "mean": 0.029199062891304455,
+      "sample_sd": 0.021163337638254526,
+      "ci95_low": 0.013400000199675521,
+      "ci95_high": 0.044998125582933396,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "red",
+      "metric": "mean_episode_length",
+      "mean": 638.934,
+      "sample_sd": 2.1306524822222928,
+      "ci95_low": 636.99,
+      "ci95_high": 640.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "blue",
+      "metric": "success_rate",
+      "mean": 0.31799999999999995,
+      "sample_sd": 0.24600812994695925,
+      "ci95_low": 0.12400000000000003,
+      "ci95_high": 0.512,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "blue",
+      "metric": "mean_reward",
+      "mean": 0.328798751950264,
+      "sample_sd": 0.20348401748993417,
+      "ci95_low": 0.1683178136795759,
+      "ci95_high": 0.489279690220952,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "blue",
+      "metric": "mean_episode_length",
+      "mean": 502.47200000000004,
+      "sample_sd": 110.84718521460073,
+      "ci95_low": 415.09,
+      "ci95_high": 589.854,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "yellow",
+      "metric": "success_rate",
+      "mean": 0.008,
+      "sample_sd": 0.017888543819998316,
+      "ci95_low": 0.0,
+      "ci95_high": 0.024,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "yellow",
+      "metric": "mean_reward",
+      "mean": 0.037260625556111274,
+      "sample_sd": 0.01510917899956825,
+      "ci95_low": 0.02340000034868714,
+      "ci95_high": 0.04768187571316952,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "yellow",
+      "metric": "mean_episode_length",
+      "mean": 638.108,
+      "sample_sd": 4.230640613429618,
+      "ci95_low": 634.324,
+      "ci95_high": 640.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "normal",
+      "metric": "success_rate",
+      "mean": 0.994,
+      "sample_sd": 0.01341640786499875,
+      "ci95_low": 0.982,
+      "ci95_high": 1.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "normal",
+      "metric": "mean_reward",
+      "mean": 1.1174725174605846,
+      "sample_sd": 0.017635575542818444,
+      "ci95_low": 1.1016897035539153,
+      "ci95_high": 1.125466580361128,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "normal",
+      "metric": "mean_episode_length",
+      "mean": 22.704,
+      "sample_sd": 11.58684728474489,
+      "ci95_low": 17.445999999999998,
+      "ci95_high": 33.074,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "red",
+      "metric": "success_rate",
+      "mean": 0.018,
+      "sample_sd": 0.024899799195977464,
+      "ci95_low": 0.002,
+      "ci95_high": 0.039999999999999994,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "red",
+      "metric": "mean_reward",
+      "mean": 0.04289093800634142,
+      "sample_sd": 0.028268844669941617,
+      "ci95_low": 0.022375625327229483,
+      "ci95_high": 0.06522500059008593,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "red",
+      "metric": "mean_episode_length",
+      "mean": 634.602,
+      "sample_sd": 6.5776302723701585,
+      "ci95_low": 629.062,
+      "ci95_high": 639.164,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "blue",
+      "metric": "success_rate",
+      "mean": 0.336,
+      "sample_sd": 0.18875910574062382,
+      "ci95_low": 0.174,
+      "ci95_high": 0.462,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "blue",
+      "metric": "mean_reward",
+      "mean": 0.3322306263297796,
+      "sample_sd": 0.17907802803537834,
+      "ci95_low": 0.173598125860095,
+      "ci95_high": 0.44903593928366903,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "blue",
+      "metric": "mean_episode_length",
+      "mean": 486.23600000000005,
+      "sample_sd": 92.8737766002869,
+      "ci95_low": 422.434,
+      "ci95_high": 567.4680000000001,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "yellow",
+      "metric": "success_rate",
+      "mean": 0.012,
+      "sample_sd": 0.0216794833886788,
+      "ci95_low": 0.0,
+      "ci95_high": 0.032,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "yellow",
+      "metric": "mean_reward",
+      "mean": 0.042265000514686055,
+      "sample_sd": 0.01463356579858908,
+      "ci95_low": 0.031200000464916177,
+      "ci95_high": 0.05425375048071142,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "yellow",
+      "metric": "mean_episode_length",
+      "mean": 636.896,
+      "sample_sd": 4.440887298727611,
+      "ci95_low": 633.0640000000001,
+      "ci95_high": 640.0,
+      "n_seeds": 5
+    }
+  ],
+  "success_drops_from_normal": [
+    {
+      "branch": "pure",
+      "variant": "red",
+      "mean_success_drop": 0.992,
+      "sample_sd": 0.010954451150103333,
+      "ci95_low": 0.984,
+      "ci95_high": 1.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "blue",
+      "mean_success_drop": 0.8140000000000001,
+      "sample_sd": 0.20019990009987518,
+      "ci95_low": 0.6439999999999999,
+      "ci95_high": 0.954,
+      "n_seeds": 5
+    },
+    {
+      "branch": "pure",
+      "variant": "yellow",
+      "mean_success_drop": 0.986,
+      "sample_sd": 0.016733200530681527,
+      "ci95_low": 0.9719999999999999,
+      "ci95_high": 0.998,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "red",
+      "mean_success_drop": 0.9960000000000001,
+      "sample_sd": 0.0054772255750516665,
+      "ci95_low": 0.992,
+      "ci95_high": 1.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "blue",
+      "mean_success_drop": 0.682,
+      "sample_sd": 0.24600812994695925,
+      "ci95_low": 0.488,
+      "ci95_high": 0.876,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "yellow",
+      "mean_success_drop": 0.992,
+      "sample_sd": 0.017888543819998336,
+      "ci95_low": 0.976,
+      "ci95_high": 1.0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "red",
+      "mean_success_drop": 0.976,
+      "sample_sd": 0.037815340802378104,
+      "ci95_low": 0.942,
+      "ci95_high": 0.998,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "blue",
+      "mean_success_drop": 0.658,
+      "sample_sd": 0.1897893569197177,
+      "ci95_low": 0.538,
+      "ci95_high": 0.826,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "yellow",
+      "mean_success_drop": 0.982,
+      "sample_sd": 0.03492849839314599,
+      "ci95_low": 0.95,
+      "ci95_high": 1.0,
+      "n_seeds": 5
+    }
+  ],
+  "paired_success_differences_vs_pure": [
+    {
+      "branch": "sequential",
+      "variant": "blue",
+      "mean_success_difference_vs_pure": 0.13200000000000003,
+      "sample_sd": 0.12872451204024815,
+      "ci95_low": 0.03800000000000002,
+      "ci95_high": 0.242,
+      "improved_seeds": 5,
+      "tied_seeds": 0,
+      "worsened_seeds": 0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "normal",
+      "mean_success_difference_vs_pure": 0.0,
+      "sample_sd": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0,
+      "improved_seeds": 0,
+      "tied_seeds": 5,
+      "worsened_seeds": 0,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "red",
+      "mean_success_difference_vs_pure": -0.004,
+      "sample_sd": 0.005477225575051661,
+      "ci95_low": -0.008,
+      "ci95_high": 0.0,
+      "improved_seeds": 0,
+      "tied_seeds": 3,
+      "worsened_seeds": 2,
+      "n_seeds": 5
+    },
+    {
+      "branch": "sequential",
+      "variant": "yellow",
+      "mean_success_difference_vs_pure": -0.006000000000000001,
+      "sample_sd": 0.029664793948382652,
+      "ci95_low": -0.027999999999999997,
+      "ci95_high": 0.02,
+      "improved_seeds": 1,
+      "tied_seeds": 1,
+      "worsened_seeds": 3,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "blue",
+      "mean_success_difference_vs_pure": 0.15,
+      "sample_sd": 0.17916472867168914,
+      "ci95_low": 0.016000000000000007,
+      "ci95_high": 0.284,
+      "improved_seeds": 3,
+      "tied_seeds": 0,
+      "worsened_seeds": 2,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "normal",
+      "mean_success_difference_vs_pure": -0.006000000000000005,
+      "sample_sd": 0.01341640786499875,
+      "ci95_low": -0.018000000000000016,
+      "ci95_high": 0.0,
+      "improved_seeds": 0,
+      "tied_seeds": 4,
+      "worsened_seeds": 1,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "red",
+      "mean_success_difference_vs_pure": 0.009999999999999998,
+      "sample_sd": 0.0282842712474619,
+      "ci95_low": -0.006,
+      "ci95_high": 0.036,
+      "improved_seeds": 1,
+      "tied_seeds": 3,
+      "worsened_seeds": 1,
+      "n_seeds": 5
+    },
+    {
+      "branch": "local",
+      "variant": "yellow",
+      "mean_success_difference_vs_pure": -0.001999999999999999,
+      "sample_sd": 0.033466401061363026,
+      "ci95_low": -0.024,
+      "ci95_high": 0.026000000000000002,
+      "improved_seeds": 1,
+      "tied_seeds": 2,
+      "worsened_seeds": 2,
+      "n_seeds": 5
+    }
+  ]
+}

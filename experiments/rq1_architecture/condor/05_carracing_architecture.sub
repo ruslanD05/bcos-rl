@@ -1,0 +1,25 @@
+# CarRacing discrete: standard versus B-cos PPO, five matched seeds.
+# condor_submit experiments/rq1_architecture/condor/05_carracing_architecture.sub
+
+BCOS_B = 2.3
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_sweep_agent.sh car_racing_part/sweep_rq1_carracing_architecture.py rq1-carracing-ppo-architecture-final-v2 qn529s0l 1 --bcos-b $(BCOS_B)
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq1_architecture/condor/logs/carracing-architecture-$(ClusterId)-$(ProcId).out
+error = experiments/rq1_architecture/condor/logs/carracing-architecture-$(ClusterId)-$(ProcId).err
+log = experiments/rq1_architecture/condor/logs/carracing-architecture-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 12GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+
+queue 10

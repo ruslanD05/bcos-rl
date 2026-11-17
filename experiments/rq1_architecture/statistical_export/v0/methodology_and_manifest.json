@@ -1,0 +1,45 @@
+{
+  "entity": "ruslandontsov2005-saarland-informatics-campus",
+  "included_run_count": 80,
+  "finished_only": true,
+  "duplicate_cell_count": 0,
+  "bootstrap": {
+    "estimand": "mean",
+    "method": "percentile bootstrap",
+    "resamples": 10000,
+    "confidence_level": 0.95,
+    "rng_base_seed": 20260812
+  },
+  "auc": {
+    "x": "global_step",
+    "y": "eval/success_rate",
+    "method": "trapezoidal over logged evaluation points only",
+    "no_extrapolation_to_step_zero": true,
+    "step_area_field": "learning_curve_auc_step_area",
+    "normalized_field": "learning_curve_auc_normalized"
+  },
+  "thresholds": "first logged evaluation global_step with success_rate >= threshold; null means not reached",
+  "history_reconstruction": "eval fields logged on adjacent W&B history rows were joined only by their exact shared global_step; no interpolation or value imputation",
+  "B_value": "read from config.bcos_b when present; otherwise extracted only from an exact config.variant string of form bcos_b<number>; standard PPO has null B",
+  "dqn_note": "The B-cos DQN configuration was B-cos-calibrated at B=2.3. The standard DQN rows also log config.bcos_b=2.3, but that value is inactive for the standard architecture.",
+  "carracing_project_resolution": "sweep qn529s0l is in rq1-carracing-ppo-architecture-final-v2; it was not found in rq1-carracing-ppo-architecture-final.",
+  "files": [
+    "aggregate_statistics.csv",
+    "aggregate_statistics.json",
+    "b_power_aggregates.csv",
+    "b_power_per_run_learning_metrics.csv",
+    "carracing_aggregates.csv",
+    "dqn_architecture_paired_aggregate.csv",
+    "dqn_architecture_paired_seed_differences.csv",
+    "excluded_runs.json",
+    "lavacrossing_aggregates.csv",
+    "learning_history.csv",
+    "missing_metrics.csv",
+    "per_run.csv",
+    "per_run_base.csv",
+    "per_run_with_learning_metrics.csv",
+    "ppo_architecture_paired_aggregate.csv",
+    "ppo_architecture_paired_seed_differences.csv",
+    "unreached_success_thresholds.csv"
+  ]
+}

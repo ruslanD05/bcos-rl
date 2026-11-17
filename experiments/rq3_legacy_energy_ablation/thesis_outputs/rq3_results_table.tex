@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lcccccc}
+        \toprule
+        Branch & Success & Return & Episode length & Deletion & Insertion & Sensitivity-$n$ \\
+        \midrule
+        Pure PPO & 1.000 $\pm$ 0.000 & 1.125 $\pm$ 0.001 & 17.73 $\pm$ 0.61 & 0.339 $\pm$ 0.093 & 0.303 $\pm$ 0.064 & 0.609 $\pm$ 0.044 \\
+        Sequential & 1.000 $\pm$ 0.000 & 1.125 $\pm$ 0.001 & 18.00 $\pm$ 0.38 & 0.437 $\pm$ 0.065 & 0.225 $\pm$ 0.026 & 0.560 $\pm$ 0.116 \\
+        Local action & 1.000 $\pm$ 0.000 & 1.124 $\pm$ 0.002 & 18.69 $\pm$ 1.08 & 0.414 $\pm$ 0.102 & 0.166 $\pm$ 0.022 & 0.634 $\pm$ 0.079 \\
+        Flipped & 1.000 $\pm$ 0.000 & 1.125 $\pm$ 0.001 & 18.00 $\pm$ 0.54 & 0.167 $\pm$ 0.048 & 0.205 $\pm$ 0.053 & 0.430 $\pm$ 0.096 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{RQ3 policy quality and attribution faithfulness over five matched seeds. Values are means $\pm$ half-widths of 95\% bootstrap confidence intervals. Higher is better for all reported faithfulness metrics.}
+    \label{tab:rq3-results}
+\end{table}

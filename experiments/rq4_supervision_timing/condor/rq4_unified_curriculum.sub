@@ -1,0 +1,24 @@
+# Unified RQ4: 4 schedules x 5 seeds = 20 W&B-agent jobs, 750,000 steps each.
+# W&B sweep: mh5ches2
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_direct_experiment.sh minigrid_part/sweep_explanation_learning_speed.py --project thesis-unified-rq4-curriculum-v2 --entity ruslandontsov2005-saarland-informatics-campus --sweep-id mh5ches2 --count 1 --total-timesteps 750000 --ppo-profile rq1-rq3-stellar --channelwise-absolute-energy --tags thesis-unified,rq4,ppo,bcos,rgb6,channelwise,curriculum,rq1-rq3-stellar,budget-750k
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq4_supervision_timing/condor/logs/rq4-$(ClusterId)-$(ProcId).out
+error = experiments/rq4_supervision_timing/condor/logs/rq4-$(ClusterId)-$(ProcId).err
+log = experiments/rq4_supervision_timing/condor/logs/rq4-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 8GB
+request_disk = 12GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+
+queue 20

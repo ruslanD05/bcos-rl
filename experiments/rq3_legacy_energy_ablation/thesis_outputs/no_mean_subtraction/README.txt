@@ -1,0 +1,2 @@
+Exact B-cos gradient x input explanations of the raw selected action logit z_a. No subtraction of the mean action logit is applied. Figures show absolute attribution magnitude using a shared purple-yellow scale; the NPZ files retain the original signed tensors.
+Representative states: {'movement': {'dataset_index': 2, 'action': 2}, 'valid_interaction': {'dataset_index': 1, 'action': 3}, 'invalid_interaction': {'dataset_index': 0, 'action': 3}, 'toggle_door_with_key': {'dataset_index': 22, 'action': 5}, 'far_from_key': {'dataset_index': 14, 'action': 1}}

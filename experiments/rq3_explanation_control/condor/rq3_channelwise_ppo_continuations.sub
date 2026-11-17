@@ -1,0 +1,23 @@
+# Channelwise RQ3: 4 branches x 5 seeds = 20 matched continuations.
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_sweep_agent.sh minigrid_part/sweep_rq3_ppo_continuations.py rq3-minigrid-ppo-channelwise-control-v3 3cay736a 1 --experiment rq3_ppo_channelwise_continuations_v3 --output-root experiments/rq3_explanation_control/continuations --channelwise-absolute-energy --additional-timesteps 300000 --include-pure
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq3_explanation_control/condor/logs/rq3-channelwise-$(ClusterId)-$(ProcId).out
+error = experiments/rq3_explanation_control/condor/logs/rq3-channelwise-$(ClusterId)-$(ProcId).err
+log = experiments/rq3_explanation_control/condor/logs/rq3-channelwise-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 8GB
+request_disk = 12GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+
+queue 20

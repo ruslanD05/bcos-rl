@@ -1,0 +1,78 @@
+{
+  "model_path": "/home/ruslan/ProjectThesis/bachelors_thesis_ruslan/rq4-consolidated/runs/blds6mal/models/final.zip",
+  "saved_timesteps": 753664,
+  "saved_explanation_coef": 0.15,
+  "observation_channels": 6,
+  "grid_lines_as_negative": false,
+  "policy_action_mode": "deterministic",
+  "policy_evaluation_skipped": true,
+  "dataset_source": "experiments/rq4_unified_profile_rerun/evaluations/seed-003/pure_reference_states.npz",
+  "dataset_actions": "stored",
+  "policy": null,
+  "explanation": {
+    "samples": 512.0,
+    "loss": 0.0311375668970868,
+    "masked_energy_ratio": 0.9688624329864979,
+    "positive_alignment": 0.4223565272986889,
+    "negative_positive_fraction": 0.49392294511199,
+    "positive_energy": 8.535559803247452,
+    "negative_positive_energy": 0.22263234667479992,
+    "positive_absolute_energy": 11.425397217273712,
+    "negative_absolute_energy": 0.43638845160603523
+  },
+  "channelwise_explanation": {
+    "samples": 512.0,
+    "selected_samples": 512.0,
+    "selected_transition_rate": 1.0,
+    "aggregation": "sum_c_abs_E_c",
+    "loss": 0.053428237326443195,
+    "target_energy_ratio": 0.9465717598795891,
+    "negative_energy_ratio": 0.053428237326443195,
+    "positive_absolute_energy": 18.694475173950195,
+    "negative_absolute_energy": 1.0439409352838993
+  },
+  "actor_distribution": {
+    "samples": 512,
+    "mean_logits": {
+      "left": -0.07908529788255692,
+      "right": 1.341820240020752,
+      "forward": 5.014596462249756,
+      "pickup": 0.19121845066547394,
+      "drop": -0.9703454375267029,
+      "toggle": -0.18603715300559998,
+      "done": -0.6889866590499878
+    },
+    "std_logits": {
+      "left": 0.9293546676635742,
+      "right": 3.4631543159484863,
+      "forward": 4.524319648742676,
+      "pickup": 1.9112789630889893,
+      "drop": 0.8276283740997314,
+      "toggle": 1.9426006078720093,
+      "done": 0.7403558492660522
+    },
+    "mean_probabilities": {
+      "left": 0.042922794818878174,
+      "right": 0.2263290137052536,
+      "forward": 0.6070163249969482,
+      "pickup": 0.061649251729249954,
+      "drop": 0.0017678182339295745,
+      "toggle": 0.05812487006187439,
+      "done": 0.00218991213478148
+    },
+    "argmax_action_rate": {
+      "left": 0.04296875,
+      "right": 0.2265625,
+      "forward": 0.61328125,
+      "pickup": 0.060546875,
+      "drop": 0.0,
+      "toggle": 0.056640625,
+      "done": 0.0
+    },
+    "dominant_argmax_action": "forward",
+    "dominant_argmax_rate": 0.61328125,
+    "mean_entropy": 0.0814070925116539,
+    "mean_max_probability": 0.9791932702064514,
+    "mean_top1_top2_logit_margin": 7.743868827819824
+  }
+}

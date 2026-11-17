@@ -1,0 +1,23 @@
+# condor_submit experiments/rq1_architecture/condor/02_ppo_b_power.sub
+# Eight B values (1.5 through 5.0 in 0.5 steps) across five seeds.
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_sweep_agent.sh minigrid_part/sweep_rq1_ppo_b_power.py rq1-minigrid-ppo-b-power-final xxao704j 1
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq1_architecture/condor/logs/ppo-b-power-$(ClusterId)-$(ProcId).out
+error = experiments/rq1_architecture/condor/logs/ppo-b-power-$(ClusterId)-$(ProcId).err
+log = experiments/rq1_architecture/condor/logs/ppo-b-power-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 8GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+
+queue 40

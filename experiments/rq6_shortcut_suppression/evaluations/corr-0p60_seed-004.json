@@ -1,0 +1,128 @@
+{
+  "config": {
+    "env_id": "MiniGrid-DoorKey-6x6-v0",
+    "episodes": 100,
+    "seed": 20004,
+    "patch_size": 6,
+    "border_height": 8,
+    "policy_action_mode": "stochastic"
+  },
+  "models": {
+    "baseline": {
+      "model_path": "/home/ruslan/ProjectThesis/bachelors_thesis_ruslan/rq6-unified-complete-results/runs/corr-0p60/seed-004/models/baseline.zip",
+      "performance": {
+        "correlated": {
+          "episodes": 100.0,
+          "success_rate": 1.0,
+          "mean_reward": 1.114299997538328,
+          "mean_episode_length": 14.28,
+          "oracle_action_agreement": 0.8739495798319328
+        },
+        "removed": {
+          "episodes": 100.0,
+          "success_rate": 0.99,
+          "mean_reward": 1.0457750018313527,
+          "mean_episode_length": 40.69,
+          "oracle_action_agreement": 0.3789628901449988
+        },
+        "permuted": {
+          "episodes": 100.0,
+          "success_rate": 0.71,
+          "mean_reward": 0.659300000704825,
+          "mean_episode_length": 172.08,
+          "oracle_action_agreement": 0.11593444909344491
+        },
+        "random": {
+          "episodes": 100.0,
+          "success_rate": 1.0,
+          "mean_reward": 1.0690000002086162,
+          "mean_episode_length": 32.4,
+          "oracle_action_agreement": 0.4941358024691358
+        }
+      },
+      "paired_sensitivity": {
+        "states": 128.0,
+        "correlated_mean_entropy": 0.48012274503707886,
+        "removed": {
+          "mean_probability_l1": 0.4209243655204773,
+          "greedy_action_agreement": 0.8671875,
+          "mean_selected_relative_logit_change": 1.2870688438415527,
+          "mean_entropy": 0.798346757888794
+        },
+        "permuted": {
+          "mean_probability_l1": 0.7765201330184937,
+          "greedy_action_agreement": 0.6484375,
+          "mean_selected_relative_logit_change": 1.9324800968170166,
+          "mean_entropy": 0.8643752336502075
+        },
+        "shortcut_region_attribution": {
+          "samples": 128.0,
+          "aggregation": "sum_c_abs_E_c",
+          "region": "full_top_row_shortcut",
+          "region_height_pixels": 8.0,
+          "mean_shortcut_region_absolute_energy": 1.2648180928372312,
+          "mean_total_absolute_energy": 7.6546242331387475,
+          "mean_shortcut_region_attribution_ratio": 0.1567876048211474
+        }
+      }
+    },
+    "suppressed": {
+      "model_path": "/home/ruslan/ProjectThesis/bachelors_thesis_ruslan/rq6-unified-complete-results/runs/corr-0p60/seed-004/models/suppressed.zip",
+      "performance": {
+        "correlated": {
+          "episodes": 100.0,
+          "success_rate": 1.0,
+          "mean_reward": 1.0963249950110912,
+          "mean_episode_length": 21.47,
+          "oracle_action_agreement": 0.6488122962272939
+        },
+        "removed": {
+          "episodes": 100.0,
+          "success_rate": 0.96,
+          "mean_reward": 0.971624999716878,
+          "mean_episode_length": 67.35,
+          "oracle_action_agreement": 0.30348923533778766
+        },
+        "permuted": {
+          "episodes": 100.0,
+          "success_rate": 0.55,
+          "mean_reward": 0.4953250029310584,
+          "mean_episode_length": 224.47,
+          "oracle_action_agreement": 0.1555218960217401
+        },
+        "random": {
+          "episodes": 100.0,
+          "success_rate": 1.0,
+          "mean_reward": 1.0061500011384488,
+          "mean_episode_length": 57.54,
+          "oracle_action_agreement": 0.3635731664928745
+        }
+      },
+      "paired_sensitivity": {
+        "states": 128.0,
+        "correlated_mean_entropy": 0.900997519493103,
+        "removed": {
+          "mean_probability_l1": 0.4766673147678375,
+          "greedy_action_agreement": 0.796875,
+          "mean_selected_relative_logit_change": 0.8427519798278809,
+          "mean_entropy": 1.157322645187378
+        },
+        "permuted": {
+          "mean_probability_l1": 0.8241111040115356,
+          "greedy_action_agreement": 0.6015625,
+          "mean_selected_relative_logit_change": 1.3793326616287231,
+          "mean_entropy": 1.1825217008590698
+        },
+        "shortcut_region_attribution": {
+          "samples": 128.0,
+          "aggregation": "sum_c_abs_E_c",
+          "region": "full_top_row_shortcut",
+          "region_height_pixels": 8.0,
+          "mean_shortcut_region_absolute_energy": 0.21974606798721652,
+          "mean_total_absolute_energy": 5.230976219754666,
+          "mean_shortcut_region_attribution_ratio": 0.0439042484285892
+        }
+      }
+    }
+  }
+}

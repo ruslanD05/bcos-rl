@@ -1,0 +1,631 @@
+{
+  "reference_model": "pure",
+  "shared_explanation_actions": "reference model stored actions",
+  "policy_action_mode": "stochastic",
+  "episodes": 100,
+  "seed": 10003,
+  "observation_channels": 6,
+  "grid_lines_as_negative": true,
+  "models": {
+    "pure": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan\\artifacts\\rq3-pure-seed3-m61v30kv-v0\\final_model.zip",
+      "saved_timesteps": 1056768,
+      "saved_explanation_coef": 0.0
+    },
+    "sequential": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan\\artifacts\\rq3-sequential-seed3-9bn4cz5j-v0\\final_model.zip",
+      "saved_timesteps": 1056768,
+      "saved_explanation_coef": 0.15
+    },
+    "local": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan\\artifacts\\rq3-local-seed3-6t441add-v0\\final_model.zip",
+      "saved_timesteps": 1056768,
+      "saved_explanation_coef": 0.15
+    }
+  },
+  "variants": {
+    "normal": {
+      "wall_appearance": "normal",
+      "wall_color": null,
+      "models": {
+        "pure": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.1247297041118145,
+            "std_reward": 0.005149472684281977,
+            "mean_episode_length": 17.97,
+            "std_episode_length": 3.661843797870138,
+            "success_rate": 1.0
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.411751264706254,
+            "masked_energy_ratio": 0.5882487185299397,
+            "positive_alignment": 0.798508919775486,
+            "negative_positive_fraction": 0.6105392649769783,
+            "positive_energy": 2.92095547914505,
+            "negative_positive_energy": 2.024694040417671,
+            "positive_absolute_energy": 3.2162616699934006,
+            "negative_absolute_energy": 3.3078259974718094
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -6.140048027038574,
+              "right": -4.383299827575684,
+              "forward": -1.8939546346664429,
+              "pickup": -5.76993465423584,
+              "drop": -7.632965564727783,
+              "toggle": -5.29667329788208,
+              "done": -7.620867729187012
+            },
+            "std_logits": {
+              "left": 4.167914390563965,
+              "right": 5.516731262207031,
+              "forward": 2.2275891304016113,
+              "pickup": 3.9260833263397217,
+              "drop": 4.149095058441162,
+              "toggle": 3.2397358417510986,
+              "done": 4.020332336425781
+            },
+            "mean_probabilities": {
+              "left": 0.08528736233711243,
+              "right": 0.21538102626800537,
+              "forward": 0.5799181461334229,
+              "pickup": 0.0581282414495945,
+              "drop": 0.0025679341051727533,
+              "toggle": 0.0561956912279129,
+              "done": 0.0025216066278517246
+            },
+            "argmax_action_rate": {
+              "left": 0.09375,
+              "right": 0.21875,
+              "forward": 0.583984375,
+              "pickup": 0.0546875,
+              "drop": 0.0,
+              "toggle": 0.048828125,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.583984375,
+            "mean_entropy": 0.15244454145431519,
+            "mean_max_probability": 0.9525830149650574,
+            "mean_top1_top2_logit_margin": 5.370344638824463
+          }
+        },
+        "sequential": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.1125781421363354,
+            "std_reward": 0.10052926255170569,
+            "mean_episode_length": 25.9,
+            "std_episode_length": 64.70710934665526,
+            "success_rate": 0.99
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.18697059154510498,
+            "masked_energy_ratio": 0.8130294196307659,
+            "positive_alignment": 0.7791971452534199,
+            "negative_positive_fraction": 0.6207664348185062,
+            "positive_energy": 5.020210236310959,
+            "negative_positive_energy": 1.0368763245642185,
+            "positive_absolute_energy": 5.535650610923767,
+            "negative_absolute_energy": 1.6588341072201729
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -5.557920455932617,
+              "right": -4.549736022949219,
+              "forward": -1.573559045791626,
+              "pickup": -6.032305717468262,
+              "drop": -7.877727508544922,
+              "toggle": -5.840166091918945,
+              "done": -7.039586067199707
+            },
+            "std_logits": {
+              "left": 3.8811724185943604,
+              "right": 5.389937400817871,
+              "forward": 2.0987966060638428,
+              "pickup": 3.507596254348755,
+              "drop": 3.9407455921173096,
+              "toggle": 3.263362407684326,
+              "done": 3.3929965496063232
+            },
+            "mean_probabilities": {
+              "left": 0.10215318202972412,
+              "right": 0.2065378874540329,
+              "forward": 0.5806889533996582,
+              "pickup": 0.05393582955002785,
+              "drop": 0.0013755452819168568,
+              "toggle": 0.053687844425439835,
+              "done": 0.0016207513399422169
+            },
+            "argmax_action_rate": {
+              "left": 0.111328125,
+              "right": 0.205078125,
+              "forward": 0.578125,
+              "pickup": 0.052734375,
+              "drop": 0.0,
+              "toggle": 0.052734375,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.578125,
+            "mean_entropy": 0.10789427161216736,
+            "mean_max_probability": 0.9728670120239258,
+            "mean_top1_top2_logit_margin": 5.970037460327148
+          }
+        },
+        "local": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.1246875177323818,
+            "std_reward": 0.005966217118996656,
+            "mean_episode_length": 18.0,
+            "std_episode_length": 4.242640687119285,
+            "success_rate": 1.0
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.2017573257908225,
+            "masked_energy_ratio": 0.7982426695525646,
+            "positive_alignment": 0.7857474647462368,
+            "negative_positive_fraction": 0.5852000452578068,
+            "positive_energy": 4.962789952754974,
+            "negative_positive_energy": 1.1240400522947311,
+            "positive_absolute_energy": 5.452151834964752,
+            "negative_absolute_energy": 1.920664831995964
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -5.508083820343018,
+              "right": -4.373594284057617,
+              "forward": -1.4626293182373047,
+              "pickup": -6.045915603637695,
+              "drop": -7.867069721221924,
+              "toggle": -6.374077796936035,
+              "done": -7.368770122528076
+            },
+            "std_logits": {
+              "left": 3.7424793243408203,
+              "right": 5.4020609855651855,
+              "forward": 2.131152629852295,
+              "pickup": 3.3819494247436523,
+              "drop": 3.902604579925537,
+              "toggle": 3.4877421855926514,
+              "done": 3.817199230194092
+            },
+            "mean_probabilities": {
+              "left": 0.09357157349586487,
+              "right": 0.2022339105606079,
+              "forward": 0.5959076285362244,
+              "pickup": 0.05344758182764053,
+              "drop": 0.000861693057231605,
+              "toggle": 0.05265150964260101,
+              "done": 0.0013261465355753899
+            },
+            "argmax_action_rate": {
+              "left": 0.0859375,
+              "right": 0.2109375,
+              "forward": 0.59765625,
+              "pickup": 0.052734375,
+              "drop": 0.0,
+              "toggle": 0.052734375,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.59765625,
+            "mean_entropy": 0.11079047620296478,
+            "mean_max_probability": 0.9685817956924438,
+            "mean_top1_top2_logit_margin": 5.912684440612793
+          }
+        }
+      }
+    },
+    "hidden": {
+      "wall_appearance": "hidden",
+      "wall_color": null,
+      "models": {
+        "pure": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.119864078015089,
+            "std_reward": 0.02486499531190119,
+            "mean_episode_length": 21.43,
+            "std_episode_length": 17.681773101134397,
+            "success_rate": 1.0
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.4231897909194231,
+            "masked_energy_ratio": 0.5768101960420609,
+            "positive_alignment": 0.7792897894978523,
+            "negative_positive_fraction": 0.5695002861320972,
+            "positive_energy": 2.8552657812833786,
+            "negative_positive_energy": 2.1224018558859825,
+            "positive_absolute_energy": 3.174590140581131,
+            "negative_absolute_energy": 3.7156729847192764
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -6.584079742431641,
+              "right": -4.795426368713379,
+              "forward": -2.0779199600219727,
+              "pickup": -5.813364028930664,
+              "drop": -8.058296203613281,
+              "toggle": -5.333801746368408,
+              "done": -7.99100399017334
+            },
+            "std_logits": {
+              "left": 4.004920482635498,
+              "right": 5.2882819175720215,
+              "forward": 2.2475929260253906,
+              "pickup": 3.664588689804077,
+              "drop": 4.076135635375977,
+              "toggle": 3.0129592418670654,
+              "done": 3.907853841781616
+            },
+            "mean_probabilities": {
+              "left": 0.07508572936058044,
+              "right": 0.19756554067134857,
+              "forward": 0.5755098462104797,
+              "pickup": 0.0776103064417839,
+              "drop": 0.0017023446271196008,
+              "toggle": 0.07102088630199432,
+              "done": 0.0015053761890158057
+            },
+            "argmax_action_rate": {
+              "left": 0.076171875,
+              "right": 0.20703125,
+              "forward": 0.576171875,
+              "pickup": 0.06640625,
+              "drop": 0.0,
+              "toggle": 0.07421875,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.576171875,
+            "mean_entropy": 0.2304043471813202,
+            "mean_max_probability": 0.9228795766830444,
+            "mean_top1_top2_logit_margin": 4.789173603057861
+          }
+        },
+        "sequential": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.0401765740662814,
+            "std_reward": 0.22492127851510058,
+            "mean_episode_length": 73.83,
+            "std_episode_length": 141.9935248523678,
+            "success_rate": 0.97
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.21890145353972912,
+            "masked_energy_ratio": 0.7810985557734966,
+            "positive_alignment": 0.6599167920649052,
+            "negative_positive_fraction": 0.5741316676139832,
+            "positive_energy": 4.71738900244236,
+            "negative_positive_energy": 0.9848789125680923,
+            "positive_absolute_energy": 5.28613868355751,
+            "negative_absolute_energy": 1.6747066676616669
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -5.969122886657715,
+              "right": -4.972757339477539,
+              "forward": -1.2892241477966309,
+              "pickup": -6.1296281814575195,
+              "drop": -8.204030990600586,
+              "toggle": -6.2879252433776855,
+              "done": -7.3339738845825195
+            },
+            "std_logits": {
+              "left": 3.6045923233032227,
+              "right": 5.114591121673584,
+              "forward": 1.7652497291564941,
+              "pickup": 3.2725372314453125,
+              "drop": 3.7341206073760986,
+              "toggle": 3.0938801765441895,
+              "done": 3.209583044052124
+            },
+            "mean_probabilities": {
+              "left": 0.07289862632751465,
+              "right": 0.1979983001947403,
+              "forward": 0.647713303565979,
+              "pickup": 0.04772447049617767,
+              "drop": 0.0008423575782217085,
+              "toggle": 0.03156154975295067,
+              "done": 0.0012613886501640081
+            },
+            "argmax_action_rate": {
+              "left": 0.0703125,
+              "right": 0.20703125,
+              "forward": 0.640625,
+              "pickup": 0.046875,
+              "drop": 0.0,
+              "toggle": 0.03515625,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.640625,
+            "mean_entropy": 0.12475137412548065,
+            "mean_max_probability": 0.9676262736320496,
+            "mean_top1_top2_logit_margin": 5.714820861816406
+          }
+        },
+        "local": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.0193406385183335,
+            "std_reward": 0.2752236033032073,
+            "mean_episode_length": 84.38,
+            "std_episode_length": 166.37546573939318,
+            "success_rate": 0.94
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.23716513067483902,
+            "masked_energy_ratio": 0.7628348730504513,
+            "positive_alignment": 0.6989076808094978,
+            "negative_positive_fraction": 0.5551720522344112,
+            "positive_energy": 4.755287200212479,
+            "negative_positive_energy": 1.1611779481172562,
+            "positive_absolute_energy": 5.298309564590454,
+            "negative_absolute_energy": 2.0653409138321877
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -5.941213130950928,
+              "right": -4.815821647644043,
+              "forward": -1.16253662109375,
+              "pickup": -6.39040470123291,
+              "drop": -8.218067169189453,
+              "toggle": -6.780905723571777,
+              "done": -7.666421890258789
+            },
+            "std_logits": {
+              "left": 3.5213751792907715,
+              "right": 5.241717338562012,
+              "forward": 1.7983893156051636,
+              "pickup": 3.1528398990631104,
+              "drop": 3.741483688354492,
+              "toggle": 3.1939504146575928,
+              "done": 3.6816301345825195
+            },
+            "mean_probabilities": {
+              "left": 0.06871630251407623,
+              "right": 0.1674196571111679,
+              "forward": 0.6859478950500488,
+              "pickup": 0.043486930429935455,
+              "drop": 0.0009246912086382508,
+              "toggle": 0.03189602121710777,
+              "done": 0.0016085316892713308
+            },
+            "argmax_action_rate": {
+              "left": 0.06640625,
+              "right": 0.171875,
+              "forward": 0.685546875,
+              "pickup": 0.04296875,
+              "drop": 0.0,
+              "toggle": 0.033203125,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.685546875,
+            "mean_entropy": 0.11621657013893127,
+            "mean_max_probability": 0.9699589014053345,
+            "mean_top1_top2_logit_margin": 5.878918647766113
+          }
+        }
+      }
+    },
+    "purple": {
+      "wall_appearance": "recolored",
+      "wall_color": "purple",
+      "models": {
+        "pure": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.124279703348875,
+            "std_reward": 0.005601383866803552,
+            "mean_episode_length": 18.29,
+            "std_episode_length": 3.9832022293627025,
+            "success_rate": 1.0
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.4719892106950283,
+            "masked_energy_ratio": 0.5280107818543911,
+            "positive_alignment": 0.8218558244407177,
+            "negative_positive_fraction": 0.6313539296388626,
+            "positive_energy": 2.751300722360611,
+            "negative_positive_energy": 2.525090128183365,
+            "positive_absolute_energy": 2.998538702726364,
+            "negative_absolute_energy": 3.9581477493047714
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -6.177403450012207,
+              "right": -4.693544387817383,
+              "forward": -2.0025634765625,
+              "pickup": -6.452547073364258,
+              "drop": -8.069714546203613,
+              "toggle": -5.316424369812012,
+              "done": -8.028453826904297
+            },
+            "std_logits": {
+              "left": 3.7833285331726074,
+              "right": 5.419819355010986,
+              "forward": 2.2124416828155518,
+              "pickup": 3.846798896789551,
+              "drop": 3.9712209701538086,
+              "toggle": 3.0448660850524902,
+              "done": 3.805591344833374
+            },
+            "mean_probabilities": {
+              "left": 0.06877884268760681,
+              "right": 0.21066875755786896,
+              "forward": 0.5931012630462646,
+              "pickup": 0.05912625044584274,
+              "drop": 0.0008550254278816283,
+              "toggle": 0.06677903980016708,
+              "done": 0.0006908761570230126
+            },
+            "argmax_action_rate": {
+              "left": 0.068359375,
+              "right": 0.212890625,
+              "forward": 0.599609375,
+              "pickup": 0.056640625,
+              "drop": 0.0,
+              "toggle": 0.0625,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.599609375,
+            "mean_entropy": 0.1307903230190277,
+            "mean_max_probability": 0.963949978351593,
+            "mean_top1_top2_logit_margin": 5.302249431610107
+          }
+        },
+        "sequential": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.1231687669456005,
+            "std_reward": 0.019538965078768122,
+            "mean_episode_length": 19.08,
+            "std_episode_length": 13.894372961742464,
+            "success_rate": 1.0
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.18488743714988232,
+            "masked_energy_ratio": 0.8151125572621822,
+            "positive_alignment": 0.7851318456232548,
+            "negative_positive_fraction": 0.6081179194152355,
+            "positive_energy": 5.072921186685562,
+            "negative_positive_energy": 1.0552026629447937,
+            "positive_absolute_energy": 5.607127279043198,
+            "negative_absolute_energy": 1.731646090745926
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -5.906647205352783,
+              "right": -4.971089839935303,
+              "forward": -1.64574134349823,
+              "pickup": -6.4932990074157715,
+              "drop": -8.364229202270508,
+              "toggle": -6.15123176574707,
+              "done": -7.457820892333984
+            },
+            "std_logits": {
+              "left": 3.598722457885742,
+              "right": 4.971494197845459,
+              "forward": 2.090770959854126,
+              "pickup": 3.228363275527954,
+              "drop": 3.5190324783325195,
+              "toggle": 3.043433427810669,
+              "done": 3.015075445175171
+            },
+            "mean_probabilities": {
+              "left": 0.08819117397069931,
+              "right": 0.1887311339378357,
+              "forward": 0.600774884223938,
+              "pickup": 0.05930580198764801,
+              "drop": 0.0006743571138940752,
+              "toggle": 0.06131751462817192,
+              "done": 0.001005134778097272
+            },
+            "argmax_action_rate": {
+              "left": 0.091796875,
+              "right": 0.189453125,
+              "forward": 0.595703125,
+              "pickup": 0.060546875,
+              "drop": 0.0,
+              "toggle": 0.0625,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.595703125,
+            "mean_entropy": 0.11926968395709991,
+            "mean_max_probability": 0.9660270810127258,
+            "mean_top1_top2_logit_margin": 5.7833356857299805
+          }
+        },
+        "local": {
+          "policy": {
+            "episodes": 100.0,
+            "mean_reward": 1.114506265670061,
+            "std_reward": 0.06408894678667448,
+            "mean_episode_length": 25.24,
+            "std_episode_length": 45.57436121329623,
+            "success_rate": 1.0
+          },
+          "explanation": {
+            "samples": 512.0,
+            "loss": 0.253541411831975,
+            "masked_energy_ratio": 0.7464585825800896,
+            "positive_alignment": 0.7943757399916649,
+            "negative_positive_fraction": 0.5976110622286797,
+            "positive_energy": 4.826189815998077,
+            "negative_positive_energy": 1.5289082080125809,
+            "positive_absolute_energy": 5.263362526893616,
+            "negative_absolute_energy": 2.540939524769783
+          },
+          "actor_distribution": {
+            "samples": 512,
+            "mean_logits": {
+              "left": -5.673017501831055,
+              "right": -4.582712173461914,
+              "forward": -1.4988205432891846,
+              "pickup": -6.500672340393066,
+              "drop": -8.216638565063477,
+              "toggle": -6.587023735046387,
+              "done": -7.650168418884277
+            },
+            "std_logits": {
+              "left": 3.4966185092926025,
+              "right": 5.271525859832764,
+              "forward": 2.095128059387207,
+              "pickup": 3.1555912494659424,
+              "drop": 3.6342179775238037,
+              "toggle": 3.279125928878784,
+              "done": 3.5888307094573975
+            },
+            "mean_probabilities": {
+              "left": 0.07753723114728928,
+              "right": 0.19464606046676636,
+              "forward": 0.6112776398658752,
+              "pickup": 0.05635678023099899,
+              "drop": 0.0007252776995301247,
+              "toggle": 0.05824775621294975,
+              "done": 0.001209283946081996
+            },
+            "argmax_action_rate": {
+              "left": 0.06640625,
+              "right": 0.208984375,
+              "forward": 0.607421875,
+              "pickup": 0.056640625,
+              "drop": 0.0,
+              "toggle": 0.060546875,
+              "done": 0.0
+            },
+            "dominant_argmax_action": "forward",
+            "dominant_argmax_rate": 0.607421875,
+            "mean_entropy": 0.12739793956279755,
+            "mean_max_probability": 0.9615062475204468,
+            "mean_top1_top2_logit_margin": 5.691781997680664
+          }
+        }
+      }
+    }
+  }
+}

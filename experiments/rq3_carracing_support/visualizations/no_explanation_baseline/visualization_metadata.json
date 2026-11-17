@@ -1,0 +1,67 @@
+{
+  "reference_model_seed": 1,
+  "environment_seed": 27000,
+  "deterministic_episode_return": null,
+  "frame_indices": [
+    630,
+    356,
+    383
+  ],
+  "actions": [
+    "gas",
+    "steer_left",
+    "steer_right"
+  ],
+  "attribution_display": "sum_c abs(E_c), independently scaled to each map's 99th percentile; observation preserved with attribution-dependent red opacity",
+  "condition_label": "no-explanation-loss",
+  "reference_states_source": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\visualizations\\rq3_carracing_reference_states.npz",
+  "models": {
+    "0": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\no_explanation_baseline\\seed-0\\hjrvwxr9\\final_model.zip",
+      "sha256": "3ea2cb66559299f00051e8f5ff8f6572f796861345bc82105b17035a605f17df"
+    },
+    "1": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\no_explanation_baseline\\seed-1\\xuufzwaw\\final_model.zip",
+      "sha256": "49f8a2c050ef1a4190e06003e7df44104d185d616d0ffcebb19cd8582cf85452"
+    },
+    "2": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\no_explanation_baseline\\seed-2\\daqvstb8\\final_model.zip",
+      "sha256": "33f4d927567b66cc5e8b5216c4860724d34485cb977732aade00c6cb18599b58"
+    },
+    "3": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\no_explanation_baseline\\seed-3\\of2dj93u\\final_model.zip",
+      "sha256": "f6a2ea5756079f02a19ab19471141163760819533d2284c536efbc8611dc6b3d"
+    },
+    "4": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\no_explanation_baseline\\seed-4\\q0rptoet\\final_model.zip",
+      "sha256": "4ae2bb2f0856bf85c692868161a7dcb5ea1d9cbfc8748dd3f79c05239adc48f6"
+    }
+  },
+  "energy_totals_for_displayed_states": {
+    "0": [
+      6.263384819030762,
+      8.204730033874512,
+      4.597558975219727
+    ],
+    "1": [
+      17.73003387451172,
+      7.6788105964660645,
+      22.59406089782715
+    ],
+    "2": [
+      24.176897048950195,
+      1.4715871810913086,
+      7.415738582611084
+    ],
+    "3": [
+      20.05217742919922,
+      3.8237721920013428,
+      1.9192008972167969
+    ],
+    "4": [
+      4.628997325897217,
+      11.475650787353516,
+      13.668630599975586
+    ]
+  }
+}

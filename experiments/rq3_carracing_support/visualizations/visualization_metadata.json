@@ -1,0 +1,65 @@
+{
+  "reference_model_seed": 1,
+  "environment_seed": 27000,
+  "deterministic_episode_return": 863.6363532543182,
+  "frame_indices": [
+    630,
+    356,
+    383
+  ],
+  "actions": [
+    "gas",
+    "steer_left",
+    "steer_right"
+  ],
+  "attribution_display": "sum_c abs(E_c), independently scaled to each map's 99th percentile; observation preserved with attribution-dependent red opacity",
+  "models": {
+    "0": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\five_seed_bundle\\seed-0\\hwsro1c3\\final_model.zip",
+      "sha256": "cdc605213dd999080be9a5c120939b7915e2f609f98fe952ac7b1b2cf1ae02d1"
+    },
+    "1": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\five_seed_bundle\\seed-1\\my63lqwo\\final_model.zip",
+      "sha256": "3862be70fc949c8fc683528067236c464f8113c340dbde64578ad79c5a121785"
+    },
+    "2": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\five_seed_bundle\\seed-2\\rtik1ysl\\final_model.zip",
+      "sha256": "cf4e7e26cdecc25014c7724f48a6d31ba27080f89f80262b295b19a4b33bf7ea"
+    },
+    "3": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\five_seed_bundle\\seed-3\\mrum6cey\\final_model.zip",
+      "sha256": "1c34790d2cdb09652d787b91f91520c55000bac323009cf6e24f6bc338d92fb2"
+    },
+    "4": {
+      "path": "C:\\RLProject\\bachelors_thesis_ruslan_submission\\experiments\\rq3_carracing_boundary_support\\models\\five_seed_bundle\\seed-4\\121iewe5\\final_model.zip",
+      "sha256": "42b05996c6c85c49998ad3aea7199f474086d271a060422e7cd135d01d707c86"
+    }
+  },
+  "energy_totals_for_displayed_states": {
+    "0": [
+      19.755836486816406,
+      0.8176422119140625,
+      3.926337718963623
+    ],
+    "1": [
+      22.11049461364746,
+      19.070205688476562,
+      15.971319198608398
+    ],
+    "2": [
+      16.905750274658203,
+      0.5363646745681763,
+      3.6502177715301514
+    ],
+    "3": [
+      11.172439575195312,
+      16.497819900512695,
+      10.303435325622559
+    ],
+    "4": [
+      8.855478286743164,
+      24.95258140563965,
+      13.434268951416016
+    ]
+  }
+}

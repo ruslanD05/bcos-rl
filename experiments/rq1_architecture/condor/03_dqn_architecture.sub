@@ -1,0 +1,23 @@
+# condor_submit experiments/rq1_architecture/condor/03_dqn_architecture.sub
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_sweep_agent.sh minigrid_part/sweep_rq1_dqn_architecture.py rq1-minigrid-dqn-architecture-final n1yminlx 1 --bcos-b 2.3
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq1_architecture/condor/logs/dqn-architecture-$(ClusterId)-$(ProcId).out
+error = experiments/rq1_architecture/condor/logs/dqn-architecture-$(ClusterId)-$(ProcId).err
+log = experiments/rq1_architecture/condor/logs/dqn-architecture-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 16GB
+request_disk = 12GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+
+queue 10

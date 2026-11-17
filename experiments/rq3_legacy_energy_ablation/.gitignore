@@ -1,0 +1,6 @@
+continuations/**/final_model.zip
+continuations/**/checkpoints/
+continuations/**/best_model/
+continuations/**/tensorboard/
+continuations/**/eval/
+

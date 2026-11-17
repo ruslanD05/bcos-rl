@@ -1,0 +1,13 @@
+comparison,metric,n,mean,sample_sd,median,min,max,bootstrap_95_ci_low,bootstrap_95_ci_high
+dqn_architecture_bcos_calibrated_minus_standard,final_episode_length,5,-404.46999999999997,239.77173916039396,-500.4,-614.14,-114.62,-590.472,-218.468
+dqn_architecture_bcos_calibrated_minus_standard,final_reward,5,0.7417859800000001,0.4067740246454195,0.9126874900000002,0.2311843999999999,1.09313446,0.42842064199999996,1.055151318
+dqn_architecture_bcos_calibrated_minus_standard,final_success,5,0.728,0.3573093897450779,0.96,0.22,0.99,0.426,0.984
+dqn_architecture_bcos_calibrated_minus_standard,first_step_success_50,2,250000.0,141421.35623730952,250000.0,150000.0,350000.0,150000.0,350000.0
+dqn_architecture_bcos_calibrated_minus_standard,first_step_success_80,0,,,,,,,
+dqn_architecture_bcos_calibrated_minus_standard,first_step_success_90,0,,,,,,,
+dqn_architecture_bcos_calibrated_minus_standard,first_step_success_95,0,,,,,,,
+dqn_architecture_bcos_calibrated_minus_standard,fps,5,-224.2,128.700038850033,-281.0,-284.0,6.0,-283.0,-108.8
+dqn_architecture_bcos_calibrated_minus_standard,learning_curve_auc_normalized,5,0.3314285714285715,0.25820280057445116,0.2142857142857143,0.0625,0.6321428571428571,0.13428571428571429,0.5289285714285714
+dqn_architecture_bcos_calibrated_minus_standard,learning_curve_auc_step_area,5,232000.0,180741.9604021158,150000.0,43750.0,442500.0,94000.0,370006.2499999999
+dqn_architecture_bcos_calibrated_minus_standard,parameter_count,5,-782.0,0.0,-782.0,-782.0,-782.0,-782.0,-782.0
+dqn_architecture_bcos_calibrated_minus_standard,training_wall_time_seconds,5,2795.8870528214743,1942.8371535105262,3705.400464790997,-674.1317510586232,3738.349130624996,1038.5004224398253,3729.727419208198

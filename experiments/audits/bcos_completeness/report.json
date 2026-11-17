@@ -1,0 +1,6375 @@
+{
+  "criterion": "abs(sum(input_times_gradient) - selected_relative_output)",
+  "explanation_target": "action output minus mean action output",
+  "dataset": {
+    "DoorKey RGB6": "RQ3 seed-0 shared real evaluation states",
+    "RQ6 RGB3": "fresh correlated-cue DoorKey-6x6 evaluation rollout"
+  },
+  "requested_samples_per_checkpoint": 128,
+  "checkpoint_count": 101,
+  "successful_audits": 101,
+  "failed_audits": 0,
+  "group_counts": {
+    "RQ1 PPO": 5,
+    "RQ2 DQN qualitative": 1,
+    "RQ3 PPO": 15,
+    "RQ4 PPO": 20,
+    "RQ6 PPO": 60
+  },
+  "all_normalization_biases_absent": true,
+  "overall_max_absolute_residual": 9.5367431640625e-06,
+  "overall_max_forward_value_difference": 0.0,
+  "results": [
+    {
+      "group": "RQ1 PPO",
+      "algorithm": "PPO",
+      "path": "experiments/rq1_bcos_architecture/minigrid_ppo_architecture/minigrid_doorkey_8x8/bcos_b2.3/seed_0/jf3kqwlr/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.257346391677856e-07,
+      "p99_absolute_residual": 2.86102294921875e-06,
+      "max_absolute_residual": 2.86102294921875e-06,
+      "max_scaled_residual": 4.4471772753240657e-07
+    },
+    {
+      "group": "RQ1 PPO",
+      "algorithm": "PPO",
+      "path": "experiments/rq1_bcos_architecture/minigrid_ppo_architecture/minigrid_doorkey_8x8/bcos_b2.3/seed_1/k3q5a4e7/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 8.996576070785522e-07,
+      "p99_absolute_residual": 2.86102294921875e-06,
+      "max_absolute_residual": 2.86102294921875e-06,
+      "max_scaled_residual": 5.363474997466255e-07
+    },
+    {
+      "group": "RQ1 PPO",
+      "algorithm": "PPO",
+      "path": "experiments/rq1_bcos_architecture/minigrid_ppo_architecture/minigrid_doorkey_8x8/bcos_b2.3/seed_2/fqw5hyn9/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 7.767230272293091e-07,
+      "p99_absolute_residual": 2.255439758300783e-06,
+      "max_absolute_residual": 2.384185791015625e-06,
+      "max_scaled_residual": 3.877968595134007e-07
+    },
+    {
+      "group": "RQ1 PPO",
+      "algorithm": "PPO",
+      "path": "experiments/rq1_bcos_architecture/minigrid_ppo_architecture/minigrid_doorkey_8x8/bcos_b2.3/seed_3/ufe7rnq3/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 7.934868335723877e-07,
+      "p99_absolute_residual": 3.0803680419921913e-06,
+      "max_absolute_residual": 3.814697265625e-06,
+      "max_scaled_residual": 6.055919357095263e-07
+    },
+    {
+      "group": "RQ1 PPO",
+      "algorithm": "PPO",
+      "path": "experiments/rq1_bcos_architecture/minigrid_ppo_architecture/minigrid_doorkey_8x8/bcos_b2.3/seed_4/1mgfx45e/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.1604279279708862e-06,
+      "p99_absolute_residual": 3.814697265625e-06,
+      "max_absolute_residual": 4.291534423828125e-06,
+      "max_scaled_residual": 7.782833222336194e-07
+    },
+    {
+      "group": "RQ2 DQN qualitative",
+      "algorithm": "DQN",
+      "path": "models/rq2_dqn_proof_of_concept/j1tv9wkx/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "inferred_from_modules",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 1
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "q_net.features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "q_net.features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "q_net.features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "q_net.features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 6.938353180885315e-08,
+      "mean_absolute_residual": 9.018549462780356e-08,
+      "p99_absolute_residual": 2.9686838388443e-07,
+      "max_absolute_residual": 3.0174851417541504e-07,
+      "max_scaled_residual": 2.3709057131782174e-05
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-local-seed0-i7sic03b/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.2544915080070496e-06,
+      "p99_absolute_residual": 5.116462707519533e-06,
+      "max_absolute_residual": 5.7220458984375e-06,
+      "max_scaled_residual": 8.009174621292914e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-local-seed1-ukp6m8mz/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.0244548320770264e-06,
+      "p99_absolute_residual": 3.685951232910158e-06,
+      "max_absolute_residual": 3.814697265625e-06,
+      "max_scaled_residual": 5.668134122061019e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-local-seed2-17omr0kt/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.2442469596862793e-06,
+      "p99_absolute_residual": 3.685951232910158e-06,
+      "max_absolute_residual": 5.245208740234375e-06,
+      "max_scaled_residual": 7.473274763469817e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-local-seed3-6t441add/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.084059476852417e-06,
+      "p99_absolute_residual": 4.162788391113283e-06,
+      "max_absolute_residual": 4.291534423828125e-06,
+      "max_scaled_residual": 6.17197429164662e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-local-seed4-v9l22sif/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.9073486328125e-06,
+      "mean_absolute_residual": 2.0870938897132874e-06,
+      "p99_absolute_residual": 7.371902465820316e-06,
+      "max_absolute_residual": 8.58306884765625e-06,
+      "max_scaled_residual": 8.773560580266349e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-pure-seed0-dpf2fjz7/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.085922122001648e-06,
+      "p99_absolute_residual": 2.86102294921875e-06,
+      "max_absolute_residual": 3.337860107421875e-06,
+      "max_scaled_residual": 6.14119869624119e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-pure-seed1-vinxwdkv/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.201467037200928e-07,
+      "p99_absolute_residual": 2.732276916503908e-06,
+      "max_absolute_residual": 2.86102294921875e-06,
+      "max_scaled_residual": 5.244525027592317e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-pure-seed2-zc4w6xrd/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 8.922070264816284e-07,
+      "p99_absolute_residual": 2.86102294921875e-06,
+      "max_absolute_residual": 3.337860107421875e-06,
+      "max_scaled_residual": 6.319774001894984e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-pure-seed3-m61v30kv/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.080334186553955e-06,
+      "p99_absolute_residual": 3.685951232910158e-06,
+      "max_absolute_residual": 4.291534423828125e-06,
+      "max_scaled_residual": 6.242696599656483e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-pure-seed4-492t934w/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.5345867723226547e-06,
+      "p99_absolute_residual": 5.464553833007816e-06,
+      "max_absolute_residual": 8.58306884765625e-06,
+      "max_scaled_residual": 8.917822356124816e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-sequential-seed0-xkfnyoio/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.2721866369247437e-06,
+      "p99_absolute_residual": 3.814697265625e-06,
+      "max_absolute_residual": 4.291534423828125e-06,
+      "max_scaled_residual": 6.048991849638696e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-sequential-seed1-lnwq5rt1/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.1567026376724243e-06,
+      "p99_absolute_residual": 3.685951232910158e-06,
+      "max_absolute_residual": 4.291534423828125e-06,
+      "max_scaled_residual": 5.788580779153563e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-sequential-seed2-uz595n5s/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.173466444015503e-06,
+      "p99_absolute_residual": 3.209114074707033e-06,
+      "max_absolute_residual": 3.337860107421875e-06,
+      "max_scaled_residual": 5.179722961656807e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-sequential-seed3-9bn4cz5j/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.259148120880127e-06,
+      "p99_absolute_residual": 4.639625549316408e-06,
+      "max_absolute_residual": 5.245208740234375e-06,
+      "max_scaled_residual": 7.348763801928726e-07
+    },
+    {
+      "group": "RQ3 PPO",
+      "algorithm": "PPO",
+      "path": "artifacts/rq3-sequential-seed4-tle88naq/final_model.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.430511474609375e-06,
+      "mean_absolute_residual": 1.8067657947540283e-06,
+      "p99_absolute_residual": 6.67572021484375e-06,
+      "max_absolute_residual": 6.67572021484375e-06,
+      "max_scaled_residual": 6.885846914883587e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/1k2nhm3w/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 7.152557373046875e-07,
+      "mean_absolute_residual": 9.443610906600952e-07,
+      "p99_absolute_residual": 3.5572052001953163e-06,
+      "max_absolute_residual": 3.814697265625e-06,
+      "max_scaled_residual": 5.897858841308334e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/72ck2mbd/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.087784767150879e-06,
+      "p99_absolute_residual": 4.162788391113283e-06,
+      "max_absolute_residual": 4.291534423828125e-06,
+      "max_scaled_residual": 7.875808591961686e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/8a0vwtwd/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.430511474609375e-06,
+      "mean_absolute_residual": 1.8086284399032593e-06,
+      "p99_absolute_residual": 6.418228149414066e-06,
+      "max_absolute_residual": 6.67572021484375e-06,
+      "max_scaled_residual": 9.715308806335088e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/99qswnd1/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.430511474609375e-06,
+      "mean_absolute_residual": 1.4640390872955322e-06,
+      "p99_absolute_residual": 5.116462707519533e-06,
+      "max_absolute_residual": 5.7220458984375e-06,
+      "max_scaled_residual": 1.0993761634381372e-06
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/an18shy4/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.2777745723724365e-06,
+      "p99_absolute_residual": 4.162788391113283e-06,
+      "max_absolute_residual": 4.76837158203125e-06,
+      "max_scaled_residual": 6.899892355249904e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/b12nqwrj/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.3820827007293701e-06,
+      "p99_absolute_residual": 5.464553833007816e-06,
+      "max_absolute_residual": 5.7220458984375e-06,
+      "max_scaled_residual": 8.542577916159644e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/b8wrw0pq/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.4156103134155273e-06,
+      "p99_absolute_residual": 4.510879516601566e-06,
+      "max_absolute_residual": 6.198883056640625e-06,
+      "max_scaled_residual": 1.0266841172779095e-06
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/blds6mal/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.5497207641601562e-06,
+      "mean_absolute_residual": 1.9334256649017334e-06,
+      "p99_absolute_residual": 7.371902465820316e-06,
+      "max_absolute_residual": 8.58306884765625e-06,
+      "max_scaled_residual": 9.991506431106245e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/emuqy09x/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.257346391677856e-07,
+      "p99_absolute_residual": 3.209114074707033e-06,
+      "max_absolute_residual": 3.337860107421875e-06,
+      "max_scaled_residual": 5.436293690763705e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/fwn1ibrw/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.1529773473739624e-06,
+      "p99_absolute_residual": 3.337860107421875e-06,
+      "max_absolute_residual": 3.814697265625e-06,
+      "max_scaled_residual": 7.283877607733302e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/kkenpk79/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.3941898941993713e-06,
+      "p99_absolute_residual": 5.593299865722658e-06,
+      "max_absolute_residual": 5.7220458984375e-06,
+      "max_scaled_residual": 1.048743456522061e-06
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/myjpxohv/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.2759119272232056e-06,
+      "p99_absolute_residual": 4.510879516601566e-06,
+      "max_absolute_residual": 9.5367431640625e-06,
+      "max_scaled_residual": 8.507151392223022e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/nigd4m43/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 8.344650268554688e-07,
+      "mean_absolute_residual": 1.0346993803977966e-06,
+      "p99_absolute_residual": 3.337860107421875e-06,
+      "max_absolute_residual": 5.245208740234375e-06,
+      "max_scaled_residual": 1.0905264389293734e-06
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/p55qisqo/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.430511474609375e-06,
+      "mean_absolute_residual": 1.4640390872955322e-06,
+      "p99_absolute_residual": 4.510879516601566e-06,
+      "max_absolute_residual": 5.245208740234375e-06,
+      "max_scaled_residual": 8.960792001744267e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/pwkh4xdx/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.0319054126739502e-06,
+      "p99_absolute_residual": 3.5572052001953163e-06,
+      "max_absolute_residual": 3.814697265625e-06,
+      "max_scaled_residual": 6.765611715309205e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/rsjrfsmy/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 5.960464477539062e-07,
+      "mean_absolute_residual": 7.562339305877686e-07,
+      "p99_absolute_residual": 2.384185791015625e-06,
+      "max_absolute_residual": 2.86102294921875e-06,
+      "max_scaled_residual": 6.58878889225889e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/u34try0x/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.1539086699485779e-06,
+      "p99_absolute_residual": 3.685951232910158e-06,
+      "max_absolute_residual": 3.814697265625e-06,
+      "max_scaled_residual": 5.145458317201701e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/v9c1k8se/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.430511474609375e-06,
+      "mean_absolute_residual": 1.5553086996078491e-06,
+      "p99_absolute_residual": 3.814697265625e-06,
+      "max_absolute_residual": 4.76837158203125e-06,
+      "max_scaled_residual": 7.879763188611832e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/x5xrz88g/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.1259689927101135e-06,
+      "p99_absolute_residual": 3.337860107421875e-06,
+      "max_absolute_residual": 3.337860107421875e-06,
+      "max_scaled_residual": 5.962771183476434e-07
+    },
+    {
+      "group": "RQ4 PPO",
+      "algorithm": "PPO",
+      "path": "rq4-consolidated/runs/z4omfr0s/models/final.zip",
+      "observation_shape": [
+        6,
+        64,
+        64
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 1.5210243873298168e-06,
+      "p99_absolute_residual": 4.76837158203125e-06,
+      "max_absolute_residual": 5.245208740234375e-06,
+      "max_scaled_residual": 8.198168757189706e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-000/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.384185791015625e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 2.384185791015625e-07,
+      "max_scaled_residual": 9.087698060739058e-08
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-000/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.462237358093262e-07,
+      "p99_absolute_residual": 9.5367431640625e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 3.7561380850092974e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-001/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.4586915969848633e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 1.1920928955078125e-06,
+      "max_scaled_residual": 3.700806985307281e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-001/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 9.313225746154785e-10,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 1.1920928955078125e-07,
+      "max_scaled_residual": 1.0694986940507079e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-002/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 7.152557373046875e-07,
+      "mean_absolute_residual": 7.133930921554565e-07,
+      "p99_absolute_residual": 7.152557373046875e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 2.0990550808619446e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-002/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.1920928955078125e-06,
+      "mean_absolute_residual": 1.1865049600601196e-06,
+      "p99_absolute_residual": 1.1920928955078125e-06,
+      "max_absolute_residual": 1.1920928955078125e-06,
+      "max_scaled_residual": 3.8123880585771985e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-003/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.7497451305389404e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 1.488509440150665e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-003/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.384185791015625e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 2.384185791015625e-07,
+      "max_scaled_residual": 1.0912837211662918e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-004/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.76837158203125e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 2.2791783749198657e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p50/seed-004/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.39349901676178e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 3.5762786865234375e-07,
+      "max_scaled_residual": 1.9978082832494692e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-000/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.384185791015625e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 2.384185791015625e-07,
+      "max_scaled_residual": 1.866517891357944e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-000/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.477318048477173e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 1.430511474609375e-06,
+      "max_scaled_residual": 4.4813523913944664e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-001/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.805624485015869e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 2.0418497115315404e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-001/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 5.960464477539062e-07,
+      "mean_absolute_residual": 5.969777703285217e-07,
+      "p99_absolute_residual": 5.960464477539062e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 3.297794535228604e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-002/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.731118679046631e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 1.1317546011468949e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-002/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.55536961555481e-07,
+      "p99_absolute_residual": 9.5367431640625e-07,
+      "max_absolute_residual": 1.1920928955078125e-06,
+      "max_scaled_residual": 3.048717189813033e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-003/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 0.0,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 0.0,
+      "max_scaled_residual": 0.0
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-003/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.805624485015869e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 2.3698819973105856e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-004/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.1920928955078125e-06,
+      "mean_absolute_residual": 1.1902302503585815e-06,
+      "p99_absolute_residual": 1.1920928955078125e-06,
+      "max_absolute_residual": 1.1920928955078125e-06,
+      "max_scaled_residual": 3.6711713846671046e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p60/seed-004/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.3748725652694702e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 2.384185791015625e-07,
+      "max_scaled_residual": 2.2119296261280397e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-000/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.1457672119140625e-06,
+      "mean_absolute_residual": 2.1439045667648315e-06,
+      "p99_absolute_residual": 2.1457672119140625e-06,
+      "max_absolute_residual": 2.1457672119140625e-06,
+      "max_scaled_residual": 6.045711984370428e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-000/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.78699803352356e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 2.2807709854077984e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-001/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.1457672119140625e-06,
+      "mean_absolute_residual": 2.130866050720215e-06,
+      "p99_absolute_residual": 2.1457672119140625e-06,
+      "max_absolute_residual": 2.1457672119140625e-06,
+      "max_scaled_residual": 5.771235009888187e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-001/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.805624485015869e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 2.348718481925971e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-002/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 0.0,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 0.0,
+      "max_scaled_residual": 0.0
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-002/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.462237358093262e-07,
+      "p99_absolute_residual": 9.5367431640625e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 2.8560984333125816e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-003/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.7497451305389404e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 8.391567973831116e-08
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-003/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.78699803352356e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 1.8854080963137676e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-004/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.477318048477173e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 1.430511474609375e-06,
+      "max_scaled_residual": 3.264386236878636e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p70/seed-004/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 7.450580596923828e-09,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 4.0825548808243184e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-000/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.4028122425079346e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 9.532425337965833e-08
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-000/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.842877388000488e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 1.430511474609375e-06,
+      "max_scaled_residual": 3.142730236049829e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-001/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.430511474609375e-06,
+      "mean_absolute_residual": 1.4193356037139893e-06,
+      "p99_absolute_residual": 1.430511474609375e-06,
+      "max_absolute_residual": 1.430511474609375e-06,
+      "max_scaled_residual": 4.1695642494232743e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-001/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.76837158203125e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 1.3258599551591033e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-002/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.430511474609375e-06,
+      "mean_absolute_residual": 1.4211982488632202e-06,
+      "p99_absolute_residual": 1.430511474609375e-06,
+      "max_absolute_residual": 1.430511474609375e-06,
+      "max_scaled_residual": 2.6654288376448676e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-002/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 7.152557373046875e-07,
+      "mean_absolute_residual": 7.096678018569946e-07,
+      "p99_absolute_residual": 7.152557373046875e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 2.8169617394269153e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-003/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 1.4901161193847656e-08,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 1.9073486328125e-06,
+      "max_scaled_residual": 3.33501816385251e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-003/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 7.450580596923828e-09,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 2.1226846058652882e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-004/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.805624485015869e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 2.1360627044941793e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p80/seed-004/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 3.725290298461914e-09,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 1.1392148024924609e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-000/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.78699803352356e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 1.9125580763557082e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-000/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 7.152557373046875e-07,
+      "mean_absolute_residual": 7.096678018569946e-07,
+      "p99_absolute_residual": 7.152557373046875e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 2.0707493320060166e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-001/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.421438694000244e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 2.123407938370292e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-001/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.86102294921875e-06,
+      "mean_absolute_residual": 2.8461217880249023e-06,
+      "p99_absolute_residual": 2.86102294921875e-06,
+      "max_absolute_residual": 2.86102294921875e-06,
+      "max_scaled_residual": 4.754955114094628e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-002/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.78699803352356e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 7.152557373046875e-07,
+      "max_scaled_residual": 2.2225593454550108e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-002/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.731118679046631e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 2.1722715359828726e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-003/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.1920928955078125e-06,
+      "mean_absolute_residual": 1.1846423149108887e-06,
+      "p99_absolute_residual": 1.1920928955078125e-06,
+      "max_absolute_residual": 1.1920928955078125e-06,
+      "max_scaled_residual": 3.7321220247577003e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-003/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 7.450580596923828e-09,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 1.2300009188948025e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-004/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 2.384185791015625e-07,
+      "mean_absolute_residual": 2.4028122425079346e-07,
+      "p99_absolute_residual": 2.384185791015625e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 8.061781642254573e-08
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-0p90/seed-004/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 1.862645149230957e-09,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 2.384185791015625e-07,
+      "max_scaled_residual": 8.096938586277247e-08
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-000/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.9073486328125e-06,
+      "mean_absolute_residual": 1.8924474716186523e-06,
+      "p99_absolute_residual": 1.9073486328125e-06,
+      "max_absolute_residual": 1.9073486328125e-06,
+      "max_scaled_residual": 3.609590066844248e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-000/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 0.0,
+      "mean_absolute_residual": 3.725290298461914e-09,
+      "p99_absolute_residual": 0.0,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 8.913273319421933e-08
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-001/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.5367431640625e-07,
+      "p99_absolute_residual": 9.5367431640625e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 1.119527581749935e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-001/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.842877388000488e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 1.430511474609375e-06,
+      "max_scaled_residual": 2.2678059963254782e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-002/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.880130290985107e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 1.9073486328125e-06,
+      "max_scaled_residual": 2.497554589808715e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-002/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.499490261077881e-07,
+      "p99_absolute_residual": 9.5367431640625e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 1.5180010848325765e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-003/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 1.430511474609375e-06,
+      "mean_absolute_residual": 1.434236764907837e-06,
+      "p99_absolute_residual": 1.430511474609375e-06,
+      "max_absolute_residual": 1.9073486328125e-06,
+      "max_scaled_residual": 2.5519270252516435e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-003/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 4.76837158203125e-07,
+      "mean_absolute_residual": 4.731118679046631e-07,
+      "p99_absolute_residual": 4.76837158203125e-07,
+      "max_absolute_residual": 4.76837158203125e-07,
+      "max_scaled_residual": 6.653377937482219e-08
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-004/models/baseline.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.5367431640625e-07,
+      "p99_absolute_residual": 9.5367431640625e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 2.2905760488356464e-07
+    },
+    {
+      "group": "RQ6 PPO",
+      "algorithm": "PPO",
+      "path": "rq6-unified-complete-results/runs/corr-1p00/seed-004/models/suppressed.zip",
+      "observation_shape": [
+        3,
+        48,
+        48
+      ],
+      "samples": 128,
+      "actor_type": "bcos",
+      "stable_bcos_norm": true,
+      "stable_bcos_norm_source": "policy_attribute",
+      "normalization_counts": {
+        "GroupNormUncentered2d": 3,
+        "RMSNormUncentered1d": 3
+      },
+      "normalization_bias_absent": true,
+      "normalization_modules": [
+        {
+          "path": "features_extractor.cnn.1",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.3",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.cnn.5",
+          "class": "GroupNormUncentered2d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "features_extractor.linear.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.1",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        },
+        {
+          "path": "policy_net.3",
+          "class": "RMSNormUncentered1d",
+          "bias_absent": true,
+          "eps": 1e-05
+        }
+      ],
+      "max_forward_value_difference_explanation_vs_ordinary": 0.0,
+      "median_absolute_residual": 9.5367431640625e-07,
+      "mean_absolute_residual": 9.480863809585571e-07,
+      "p99_absolute_residual": 9.5367431640625e-07,
+      "max_absolute_residual": 9.5367431640625e-07,
+      "max_scaled_residual": 1.9247679006184626e-07
+    }
+  ]
+}

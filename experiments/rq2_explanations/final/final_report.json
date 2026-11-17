@@ -1,0 +1,472 @@
+{
+  "protocol": {
+    "dataset": "/home/ruslan/ProjectThesis/bachelors_thesis_ruslan/experiments/rq2_ppo_explanations/shared_states_rgb6.npz",
+    "statistical_unit": "training seed; the three fixed configuration runs are retained as a within-seed cluster",
+    "bcos_models": 15,
+    "standard_models": 5,
+    "bootstrap_repeats": 10000,
+    "scalar_target": "stored action logit minus mean action logit",
+    "deletion_insertion": "AUC advantage over an equal-area random ordering on a rendered-empty-grid substrate",
+    "sensitivity_n": "Adapted Sensitivity-n summary: PCC is computed separately at each prespecified subset fraction from 10% to 90%, then the nine fixed-size PCCs are averaged; Spearman is retained only in source evaluations as a secondary diagnostic"
+  },
+  "aggregate": {
+    "groups": {
+      "standard/saliency": {
+        "deletion_advantage": {
+          "mean": 0.35584283937891936,
+          "std": 0.05932390375322148,
+          "n": 5,
+          "ci95_low": 0.3105094031223036,
+          "ci95_high": 0.4007709237828285
+        },
+        "insertion_advantage": {
+          "mean": 0.2319696634761653,
+          "std": 0.03634821293305958,
+          "n": 5,
+          "ci95_low": 0.20377873730008841,
+          "ci95_high": 0.26048574882199577
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.028142744781884,
+          "std": 0.04553616282261854,
+          "n": 5,
+          "ci95_low": -0.00597816026812462,
+          "ci95_high": 0.06523445951480826
+        },
+        "normalized_infidelity": {
+          "mean": 1.0002713084220887,
+          "std": 0.00032649112823626236,
+          "n": 5,
+          "ci95_low": 1.000065843462944,
+          "ci95_high": 1.0005703926086427
+        },
+        "completeness_relative_error": {
+          "mean": 1.0002100304830022,
+          "std": 0.00020159399173505437,
+          "n": 5,
+          "ci95_low": 1.000086810852028,
+          "ci95_high": 1.0003914355330379
+        },
+        "attribution_seconds_per_sample": {
+          "mean": 0.0003052935156249603,
+          "std": 7.565908154198597e-05,
+          "n": 5,
+          "ci95_low": 0.0002595349999999108,
+          "ci95_high": 0.0003725822656249989
+        }
+      },
+      "standard/integrated_gradients": {
+        "deletion_advantage": {
+          "mean": 0.39642894309158266,
+          "std": 0.044912249951224774,
+          "n": 5,
+          "ci95_low": 0.36075802102691623,
+          "ci95_high": 0.432099865156249
+        },
+        "insertion_advantage": {
+          "mean": 0.24644683840956239,
+          "std": 0.039456708691729556,
+          "n": 5,
+          "ci95_low": 0.21646167648228332,
+          "ci95_high": 0.2750821663171778
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.7389818757750899,
+          "std": 0.058184640430444766,
+          "n": 5,
+          "ci95_low": 0.6941043717597333,
+          "ci95_high": 0.7825525191421224
+        },
+        "normalized_infidelity": {
+          "mean": 0.18040686696767808,
+          "std": 0.10018162727110601,
+          "n": 5,
+          "ci95_low": 0.11551616787910461,
+          "ci95_high": 0.263473579287529
+        },
+        "completeness_relative_error": {
+          "mean": 0.007798744339567577,
+          "std": 0.0008152411306510833,
+          "n": 5,
+          "ci95_low": 0.007134657697185211,
+          "ci95_high": 0.008366783363035021
+        },
+        "attribution_seconds_per_sample": {
+          "mean": 0.006873922968750001,
+          "std": 4.4121573624344496e-05,
+          "n": 5,
+          "ci95_low": 0.0068395281249999055,
+          "ci95_high": 0.006908317812500097
+        }
+      },
+      "standard/smoothgrad": {
+        "deletion_advantage": {
+          "mean": 0.35626099951336476,
+          "std": 0.05967009649637983,
+          "n": 5,
+          "ci95_low": 0.31191020875912934,
+          "ci95_high": 0.4006117902676002
+        },
+        "insertion_advantage": {
+          "mean": 0.23275208636883965,
+          "std": 0.040207935036502544,
+          "n": 5,
+          "ci95_low": 0.19980632069275106,
+          "ci95_high": 0.263949239756286
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.0258096169644003,
+          "std": 0.04867674498752164,
+          "n": 5,
+          "ci95_low": -0.011285018409839257,
+          "ci95_high": 0.0641010619133315
+        },
+        "normalized_infidelity": {
+          "mean": 1.0002761602401733,
+          "std": 0.00032050728948442253,
+          "n": 5,
+          "ci95_low": 1.0000902116298676,
+          "ci95_high": 1.0005698919296264
+        },
+        "completeness_relative_error": {
+          "mean": 1.0002091229384433,
+          "std": 0.00020043664021399967,
+          "n": 5,
+          "ci95_low": 1.0000898976651489,
+          "ci95_high": 1.000388576842398
+        },
+        "attribution_seconds_per_sample": {
+          "mean": 0.003153371953125017,
+          "std": 0.0005751865254783165,
+          "n": 5,
+          "ci95_low": 0.002766672656249991,
+          "ci95_high": 0.0036621703906251747
+        }
+      },
+      "bcos/bcos": {
+        "deletion_advantage": {
+          "mean": 0.22135793453020727,
+          "std": 0.08257947819660745,
+          "n": 15,
+          "ci95_low": 0.1967795066263946,
+          "ci95_high": 0.2530643728271889
+        },
+        "insertion_advantage": {
+          "mean": 0.18668552982780914,
+          "std": 0.03950563811920593,
+          "n": 15,
+          "ci95_low": 0.177118857075586,
+          "ci95_high": 0.19603150623459734
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.42213214474228494,
+          "std": 0.14704399116217678,
+          "n": 15,
+          "ci95_low": 0.36387065503770905,
+          "ci95_high": 0.4980393562285551
+        },
+        "normalized_infidelity": {
+          "mean": 0.45296123027801516,
+          "std": 0.17255472596087096,
+          "n": 15,
+          "ci95_low": 0.39065181016921996,
+          "ci95_high": 0.5309032181898753
+        },
+        "completeness_relative_error": {
+          "mean": 1.618726249367707e-07,
+          "std": 2.5525744777488105e-08,
+          "n": 15,
+          "ci95_low": 1.4778984030457233e-07,
+          "ci95_high": 1.788544328290361e-07
+        },
+        "attribution_seconds_per_sample": {
+          "mean": 0.00043379598958335206,
+          "std": 4.844058163715955e-05,
+          "n": 15,
+          "ci95_low": 0.00040760700520804015,
+          "ci95_high": 0.0004580048697919281
+        }
+      },
+      "bcos/saliency": {
+        "deletion_advantage": {
+          "mean": 0.18763396536190305,
+          "std": 0.07357839168041658,
+          "n": 15,
+          "ci95_low": 0.15326287104415923,
+          "ci95_high": 0.21706114878023883
+        },
+        "insertion_advantage": {
+          "mean": 0.17353816309595654,
+          "std": 0.043098624531999946,
+          "n": 15,
+          "ci95_low": 0.16194927805216103,
+          "ci95_high": 0.18346299316644432
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.05359960442694319,
+          "std": 0.024257341620349638,
+          "n": 15,
+          "ci95_low": 0.041206314518483375,
+          "ci95_high": 0.06811058996660413
+        },
+        "normalized_infidelity": {
+          "mean": 1.000060220559438,
+          "std": 0.0002760751547491641,
+          "n": 15,
+          "ci95_low": 0.9999271869659424,
+          "ci95_high": 1.0002059499422709
+        },
+        "completeness_relative_error": {
+          "mean": 1.0000762242817516,
+          "std": 0.00022453263863726053,
+          "n": 15,
+          "ci95_low": 0.9999717620558589,
+          "ci95_high": 1.0001853947481891
+        },
+        "attribution_seconds_per_sample": {
+          "mean": 0.0006127926562502495,
+          "std": 0.00011505328949361263,
+          "n": 15,
+          "ci95_low": 0.0005667569531253729,
+          "ci95_high": 0.000656758229166717
+        }
+      },
+      "bcos/integrated_gradients": {
+        "deletion_advantage": {
+          "mean": 0.22348802626716305,
+          "std": 0.07052337244866452,
+          "n": 15,
+          "ci95_low": 0.20163806175215543,
+          "ci95_high": 0.24550536382231677
+        },
+        "insertion_advantage": {
+          "mean": 0.17154198331776455,
+          "std": 0.052779520769448765,
+          "n": 15,
+          "ci95_low": 0.15353702471857067,
+          "ci95_high": 0.18599099242583694
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.350102759497316,
+          "std": 0.07574519558705932,
+          "n": 15,
+          "ci95_low": 0.2935482943272296,
+          "ci95_high": 0.4066572246674023
+        },
+        "normalized_infidelity": {
+          "mean": 1.733057721455892,
+          "std": 0.543255842727625,
+          "n": 15,
+          "ci95_low": 1.6294305245081584,
+          "ci95_high": 1.844641876220703
+        },
+        "completeness_relative_error": {
+          "mean": 0.6577478960648411,
+          "std": 0.22687783887246998,
+          "n": 15,
+          "ci95_low": 0.5540170552847555,
+          "ci95_high": 0.7614787368449267
+        },
+        "attribution_seconds_per_sample": {
+          "mean": 0.0142093129166667,
+          "std": 0.0008405900160353569,
+          "n": 15,
+          "ci95_low": 0.013952399036458491,
+          "ci95_high": 0.014416779557291667
+        }
+      },
+      "bcos/smoothgrad": {
+        "deletion_advantage": {
+          "mean": 0.18680441179160198,
+          "std": 0.07586545962575661,
+          "n": 15,
+          "ci95_low": 0.15227026848176856,
+          "ci95_high": 0.21568356651167744
+        },
+        "insertion_advantage": {
+          "mean": 0.173981532772906,
+          "std": 0.044517182263878095,
+          "n": 15,
+          "ci95_low": 0.15996852311811888,
+          "ci95_high": 0.1859948433507246
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.047951871037326205,
+          "std": 0.02149738146851474,
+          "n": 15,
+          "ci95_low": 0.040415875624425376,
+          "ci95_high": 0.05485063272544198
+        },
+        "normalized_infidelity": {
+          "mean": 1.0000548760096233,
+          "std": 0.000261230960753741,
+          "n": 15,
+          "ci95_low": 0.9999300161997478,
+          "ci95_high": 1.0001875201861063
+        },
+        "completeness_relative_error": {
+          "mean": 1.0000782050032453,
+          "std": 0.00022731757122259024,
+          "n": 15,
+          "ci95_low": 0.9999725814221715,
+          "ci95_high": 1.0001886192196818
+        },
+        "attribution_seconds_per_sample": {
+          "mean": 0.0044387008333334425,
+          "std": 0.0004888436837957003,
+          "n": 15,
+          "ci95_low": 0.004232552161458081,
+          "ci95_high": 0.004681345208333513
+        }
+      }
+    },
+    "paired_bcos_differences": {
+      "bcos_minus_saliency": {
+        "deletion_advantage": {
+          "mean": 0.03372396916830425,
+          "std": 0.03826915060871303,
+          "n": 15,
+          "ci95_low": 0.013183472667538838,
+          "ci95_high": 0.05757852231388798
+        },
+        "insertion_advantage": {
+          "mean": 0.013147366731852609,
+          "std": 0.012118994510562095,
+          "n": 15,
+          "ci95_low": 0.006818443902742052,
+          "ci95_high": 0.020323342090100605
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.36853254031534183,
+          "std": 0.161538031012068,
+          "n": 15,
+          "ci95_low": 0.2977449832329875,
+          "ci95_high": 0.4449429459066947
+        },
+        "normalized_infidelity": {
+          "mean": -0.547098990281423,
+          "std": 0.17271149491407953,
+          "n": 15,
+          "ci95_low": -0.6095414439837138,
+          "ci95_high": -0.4690812051296234
+        },
+        "completeness_relative_error": {
+          "mean": -1.0000760624091267,
+          "std": 0.00022451320695973678,
+          "n": 15,
+          "ci95_low": -1.000185213666444,
+          "ci95_high": -0.9999716119032345
+        },
+        "attribution_seconds_per_sample": {
+          "mean": -0.0001789966666668974,
+          "std": 0.00013091300549594265,
+          "n": 15,
+          "ci95_low": -0.00024398994791686353,
+          "ci95_high": -0.00011400338541693127
+        }
+      },
+      "bcos_minus_integrated_gradients": {
+        "deletion_advantage": {
+          "mean": -0.002130091736955786,
+          "std": 0.04190046636284065,
+          "n": 15,
+          "ci95_low": -0.022038583776651396,
+          "ci95_high": 0.017778400302739823
+        },
+        "insertion_advantage": {
+          "mean": 0.015143546510044606,
+          "std": 0.026074082215809185,
+          "n": 15,
+          "ci95_low": 0.006621080312123296,
+          "ci95_high": 0.028769045409250123
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.07202938524496902,
+          "std": 0.14299666458065716,
+          "n": 15,
+          "ci95_low": 0.005048901473564053,
+          "ci95_high": 0.139009869016374
+        },
+        "normalized_infidelity": {
+          "mean": -1.2800964911778767,
+          "std": 0.6300479468314957,
+          "n": 15,
+          "ci95_low": -1.4064493060112,
+          "ci95_high": -1.121264346440633
+        },
+        "completeness_relative_error": {
+          "mean": -0.6577477341922161,
+          "std": 0.22687785693530585,
+          "n": 15,
+          "ci95_low": -0.7614785879150805,
+          "ci95_high": -0.5540168804693519
+        },
+        "attribution_seconds_per_sample": {
+          "mean": -0.013775516927083349,
+          "std": 0.0008404373268075185,
+          "n": 15,
+          "ci95_low": -0.013996581901041753,
+          "ci95_high": -0.013519125885416728
+        }
+      },
+      "bcos_minus_smoothgrad": {
+        "deletion_advantage": {
+          "mean": 0.03455352273860531,
+          "std": 0.04078886139311501,
+          "n": 15,
+          "ci95_low": 0.012577342832272742,
+          "ci95_high": 0.06041494610243602
+        },
+        "insertion_advantage": {
+          "mean": 0.012703997054903157,
+          "std": 0.0168228478809599,
+          "n": 15,
+          "ci95_low": 0.0056026710197726315,
+          "ci95_high": 0.021773766429121086
+        },
+        "sensitivity_n_pearson": {
+          "mean": 0.3741802737049589,
+          "std": 0.1487165295468398,
+          "n": 15,
+          "ci95_low": 0.3165834358672326,
+          "ci95_high": 0.44728404180622516
+        },
+        "normalized_infidelity": {
+          "mean": -0.5470936457316081,
+          "std": 0.17269782518904292,
+          "n": 15,
+          "ci95_low": -0.6095279256502787,
+          "ci95_high": -0.4690832992394765
+        },
+        "completeness_relative_error": {
+          "mean": -1.0000780431306202,
+          "std": 0.00022729810383651192,
+          "n": 15,
+          "ci95_low": -1.0001884381379367,
+          "ci95_high": -0.999972431269547
+        },
+        "attribution_seconds_per_sample": {
+          "mean": -0.00400490484375009,
+          "std": 0.000477018944819229,
+          "n": 15,
+          "ci95_low": -0.004234319375000102,
+          "ci95_high": -0.0038104337499997717
+        }
+      }
+    }
+  },
+  "qualitative_figure": {
+    "model_path": "/home/ruslan/ProjectThesis/bachelors_thesis_ruslan/experiments/rq1_bcos_architecture/minigrid_ppo_architecture/minigrid_doorkey_8x8/bcos_b2.3/seed_0/jf3kqwlr/final_model.zip",
+    "dataset_indices": [
+      127,
+      140,
+      143
+    ],
+    "actions": [
+      "forward",
+      "pickup",
+      "toggle"
+    ],
+    "normalization": "absolute channel-summed attribution, independently scaled to each map's 99th percentile; red overlay with maximum opacity 80%"
+  }
+}

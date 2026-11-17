@@ -1,0 +1,90 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Local training artifacts
+runs/
+models/
+!experiments/carracing_explanation_mask_comparison/models/
+!experiments/carracing_explanation_mask_comparison/models/*.zip
+!experiments/thesis_model_registry/models/
+!experiments/thesis_model_registry/models/**
+minigrid_part/models/
+minigrid_part/eval_logs/
+minigrid_part/wandb_runs/
+minigrid_part/runs/
+checkpoints/
+tensorboard/
+wandb/
+wandb_runs/
+*.monitor.csv
+
+# Reproducible RQ outputs keep configs, manifests, metrics, and figures in Git.
+# Full architecture checkpoints remain local/W&B artifacts to avoid duplicating
+# hundreds of megabytes in repository history.
+experiments/rq1_architecture/minigrid_ppo_architecture/**/final_model.zip
+experiments/rq1_architecture/minigrid_ppo_architecture/**/best_model/
+
+# Local evaluator smoke outputs
+tmp/
+
+# Downloaded W&B artifacts and duplicate analysis exports
+artifacts/
+rq5-analysis/
+
+# Generated experiment checkpoints stay local or in W&B artifacts
+experiments/ppo_confidence_ablation/continuations/**/*.zip
+experiments/patch_negative_hint_short_branches/**/*.zip
+
+# One-off local evaluation outputs
+local_coef060_*
+local_mask_shared_states_rgb6.npz
+sequential_all_negative.png
+local_directional_masks.png
+mask_definitions.npz
+
+# PGTG generated logs
+pgtg/pgtg/logs/
+
+# Model archives are stored locally or as W&B artifacts, never in Git.
+*.zip
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+

@@ -1,0 +1,25 @@
+# Unified RQ6: 6 correlations x 5 seeds = 30 paired W&B-agent jobs.
+# Each job trains one Baseline/Suppressed model pair for 150,000 transitions.
+# W&B sweep: v0jkk8mv
+
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq1_architecture/condor/run_direct_experiment.sh minigrid_part/sweep_rq6_shortcut_suppression_channelwise.py --project thesis-unified-rq6-shortcut-v1 --entity ruslandontsov2005-saarland-informatics-campus --sweep-id v0jkk8mv --count 1 --env-id MiniGrid-DoorKey-6x6-v0 --total-timesteps 150000 --n-envs 4 --device cpu --ppo-profile rq1-rq3-stellar --training-correlations 0.50,0.60,0.70,0.80,0.90,1.00 --border-height 8 --patch-size 6 --mask-profile border_negative_screen_positive --explanation-coef 0.15 --explanation-max-grad-ratio 0.1 --training-eval-freq 25000 --training-eval-episodes 30 --eval-episodes 100 --max-paired-states 128 --source-success-threshold 0.90 --tags thesis-unified,rq6,ppo,bcos,rgb6,channelwise,shortcut-suppression,rq1-rq3-stellar
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq6_shortcut_suppression/condor/logs/rq6-$(ClusterId)-$(ProcId).out
+error = experiments/rq6_shortcut_suppression/condor/logs/rq6-$(ClusterId)-$(ProcId).err
+log = experiments/rq6_shortcut_suppression/condor/logs/rq6-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 8GB
+request_disk = 12GB
++WantScratchMounted = true
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+getenv = WANDB_API_KEY
+
+queue 30

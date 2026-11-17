@@ -1,0 +1,21 @@
+universe = docker
+docker_image = pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+executable = /bin/bash
+arguments = experiments/rq3_legacy_energy_ablation/condor/run_rq3_evaluation.sh
+
+initialdir = /home/rudo00002/bachelor_thesis_RL/bachelors_thesis_ruslan
+output = experiments/rq3_legacy_energy_ablation/condor/logs/rq3-eval-$(ClusterId).out
+error = experiments/rq3_legacy_energy_ablation/condor/logs/rq3-eval-$(ClusterId).err
+log = experiments/rq3_legacy_energy_ablation/condor/logs/rq3-eval-$(ClusterId).log
+
+request_cpus = 2
+request_memory = 8GB
+request_disk = 12GB
++WantScratchMounted = true
+
+should_transfer_files = NO
+stream_output = True
+stream_error = True
+
+queue 1

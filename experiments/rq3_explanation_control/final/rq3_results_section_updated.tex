@@ -1,0 +1,209 @@
+\section{RQ3: Controlling B-cos Explanations}
+\label{sec:rq3_results}
+
+RQ3 asks whether spatial supervision can control the attribution distribution of a
+learned policy without substantially reducing task performance. Five independently
+trained $B=2.3$ PPO policies from RQ1 were used as source checkpoints. Each checkpoint
+was continued for 303,104 transitions under four matched conditions:
+
+\begin{itemize}
+    \item pure PPO continuation without explanation supervision;
+    \item supervision using the strict sequential task-dependent mask;
+    \item supervision using a local action-conditioned mask; and
+    \item supervision using the exactly flipped strict sequential mask.
+\end{itemize}
+
+For movement actions, the local mask selects the agent and the single
+action-relative cell; for interaction actions, it selects the agent and a valid
+front-cell affordance. All remaining pixels are penalized.
+
+The supervised branches used an explanation coefficient of $0.15$ and limited the
+explanation actor-gradient norm to at most $0.1$ times the PPO actor-gradient norm.
+For an RGB6 explanation $E\in\mathbb{R}^{6\times H\times W}$, attribution energy was
+computed as
+\begin{equation}
+    U(x,y)=\sum_{c=1}^{6}\lvert E_c(x,y)\rvert.
+    \label{eq:rq3_channelwise_energy}
+\end{equation}
+Thus, opposing contributions in different channels cannot cancel. The localization
+score is the fraction of total $U$ inside the positive region of the evaluated mask.
+
+Every final policy was evaluated over 100 stochastic episodes. Explanation metrics
+used the same 256 fixed state--action samples for all branches within each seed. Each
+branch was evaluated under the sequential, local, and flipped masks, rather than only
+under its training mask. Reported intervals are 95\% bootstrap confidence intervals
+over the five independent seeds.
+
+\begin{table}[htbp]
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lccccc}
+        \toprule
+        Branch & Success & Return & Episode length & Deletion advantage & Insertion advantage \\
+        \midrule
+        Pure PPO
+        & $1.000 \pm 0.000$
+        & $1.125 \pm 0.0004$
+        & $17.71 \pm 0.30$
+        & $0.252 \pm 0.078$
+        & $0.292 \pm 0.122$ \\
+        Sequential
+        & $0.998 \pm 0.003$
+        & $1.123 \pm 0.004$
+        & $19.37 \pm 2.73$
+        & $0.451 \pm 0.039$
+        & $0.241 \pm 0.098$ \\
+        Local action
+        & $0.988 \pm 0.018$
+        & $1.112 \pm 0.018$
+        & $25.96 \pm 11.62$
+        & $0.230 \pm 0.194$
+        & $0.172 \pm 0.069$ \\
+        Flipped
+        & $0.994 \pm 0.009$
+        & $1.115 \pm 0.016$
+        & $24.66 \pm 11.01$
+        & $0.219 \pm 0.056$
+        & $0.211 \pm 0.070$ \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{Policy quality and perturbation faithfulness over five matched seeds.
+    Values are means $\pm$ half-widths of 95\% bootstrap confidence intervals. Deletion and insertion
+    are reported as advantages over equal-area random perturbations; higher is better.}
+    \label{tab:rq3_results}
+\end{table}
+
+Task performance was largely preserved (Table~\ref{tab:rq3_results}). Mean success was
+$1.000$ for pure continuation, $0.998$ for sequential supervision, $0.988$ for the
+local mask, and $0.994$ for the flipped control. Their paired success differences
+relative to pure were $-0.002$ $[-0.006,0.000]$, $-0.012$
+$[-0.036,0.000]$, and $-0.006$ $[-0.018,0.000]$, respectively.
+
+\begin{table}[htbp]
+    \centering
+    \small
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Branch & Sequential-mask ratio & Local-mask ratio & Flipped-mask ratio \\
+        \midrule
+        Pure PPO   & $0.252 \pm 0.038$ & $0.190 \pm 0.035$ & $0.748 \pm 0.038$ \\
+        Sequential & $0.644 \pm 0.083$ & $0.394 \pm 0.078$ & $0.356 \pm 0.081$ \\
+        Local action & $0.546 \pm 0.076$ & $0.480 \pm 0.100$ & $0.454 \pm 0.076$ \\
+        Flipped    & $0.090 \pm 0.024$ & $0.076 \pm 0.018$ & $0.910 \pm 0.023$ \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{Channelwise absolute attribution-energy ratios under all three spatial masks.
+    Values are means $\pm$ half-widths of 95\% bootstrap confidence intervals over
+    five matched seeds.}
+    \label{tab:rq3_localization}
+\end{table}
+
+Sequential supervision increased sequential-mask alignment from $0.252$ to $0.644$,
+a paired increase of $0.392$ $[0.305,0.468]$. Local supervision increased local-mask
+alignment from $0.190$ to $0.480$, a paired increase of $0.290$
+$[0.208,0.365]$. The flipped control increased flipped-mask alignment from $0.748$
+to $0.910$, a paired increase of $0.162$ $[0.130,0.188]$, while sequential-mask
+alignment fell to $0.090$. Thus, optimization follows the supplied spatial target
+rather than merely concentrating an already task-aligned explanation.
+
+The initial loss instead formed
+$U_{\mathrm{old}}(x,y)=\lvert\sum_c E_c(x,y)\rvert$. This was unsuitable for
+RGB6 because oppositely signed contributions from complementary channels can cancel
+before spatial localization is measured. In the example in
+Figure~\ref{fig:rq3_old_vs_channelwise}, supporting and suppressing contributions
+occur across the six channels at the same spatial locations. The final definition,
+$U(x,y)=\sum_c\lvert E_c(x,y)\rvert$, takes the magnitude before summing channels,
+so these contributions cannot cancel inside the mask loss.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Thesis_Template_DE_EN/BA_MA_English/sections/images/rq3_old_vs_channelwise_loss_rgb6_seed2_state27.pdf}
+    \caption{Signed RGB6 explanations for pure PPO, the initial loss, the final
+    channelwise loss, and the local-action-mask loss on state~27 and the same toggle action. Red supports the selected
+    action, blue suppresses it, and white is zero. The last column is the signed sum of all six
+    channels. Each row is normalized independently, while one symmetric scale is
+    shared by the six channels and their sum; the color bars report the original
+    contributions. Opposite signs across channels show why
+    summing before taking absolute values permits cancellation. The
+    trained checkpoints differ in continuation budget and mask variant; the comparison
+    is therefore illustrative rather than quantitative.}
+    \label{fig:rq3_old_vs_channelwise}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.98\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Thesis_Template_DE_EN/BA_MA_English/sections/images/rq3_rgb6_channels_state_10_toggle_seed2_compacted_absolute_energy.pdf}
+        \caption{Toggle action.}
+        \label{fig:rq3_toggle_explanation}
+    \end{subfigure}
+
+    \vspace{0.8em}
+
+    \begin{subfigure}[t]{0.98\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Thesis_Template_DE_EN/BA_MA_English/sections/images/rq3_rgb6_channels_state_22_pickup_seed2_compacted_absolute_energy.pdf}
+        \caption{Pickup action.}
+        \label{fig:rq3_pickup_explanation}
+    \end{subfigure}
+
+    \caption{Representative RGB6 explanations from seed~2. Each row compares the
+    observation, pure PPO, sequentially supervised PPO, and PPO supervised with the
+    local action mask. The six channels are
+    compacted using $U=\sum_c\lvert E_c\rvert$. Each explanation is normalized
+    independently on a linear scale. White denotes zero, magenta denotes higher
+    attribution energy, and the color bars report the original magnitudes.}
+    \label{fig:rq3_representative_explanations}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.98\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Thesis_Template_DE_EN/BA_MA_English/sections/images/rq3_rgb6_channels_state_10_toggle_seed2_absolute.pdf}
+        \caption{Toggle action.}
+        \label{fig:rq3_toggle_six_channels}
+    \end{subfigure}
+
+    \vspace{0.8em}
+
+    \begin{subfigure}[t]{0.98\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Thesis_Template_DE_EN/BA_MA_English/sections/images/rq3_rgb6_channels_state_22_pickup_seed2_absolute.pdf}
+        \caption{Pickup action.}
+        \label{fig:rq3_pickup_six_channels}
+    \end{subfigure}
+
+    \caption{The same representative explanations before channel compaction. Rows
+    correspond to pure PPO, sequentially supervised PPO, and PPO supervised with the
+    local action mask; columns show the RGB6
+    channels $R$, $G$, $B$, $255-R$, $255-G$, and $255-B$. Absolute attribution
+    magnitude is shown from white (zero) to magenta. For each model and observation,
+    one linear scale is shared across all six channels, and the color bar reports the
+    original magnitude.}
+    \label{fig:rq3_six_channel_explanations}
+\end{figure}
+
+Localization and perturbation faithfulness were related but not equivalent.
+Sequential supervision improved deletion advantage over pure PPO by $0.199$
+$[0.098,0.290]$, whereas its insertion difference was $-0.051$
+$[-0.191,0.060]$. For the local branch, deletion did not change conclusively and
+insertion decreased by $0.120$ $[-0.247,-0.031]$. Neither faithfulness difference
+was conclusive for the flipped branch. Hence, spatial compliance did not imply a
+general improvement across all faithfulness criteria.
+
+\subsection{Answer to RQ3}
+
+Channelwise absolute-energy supervision reliably changed where pretrained B-cos PPO
+policies attributed their selected actions while largely preserving DoorKey task
+performance. Sequential and local action-conditioned supervision moved attribution
+energy toward their intended regions, and the flipped negative control moved it in
+the opposite direction. Explanation control therefore follows the supplied mask, but high mask
+alignment alone does not guarantee semantic correctness or uniformly improved
+faithfulness.
